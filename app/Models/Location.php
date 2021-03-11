@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Listing;
 
-class Comment extends Model
+class Location extends Model
 {
     use HasFactory;
 

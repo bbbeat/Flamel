@@ -9,6 +9,10 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 use App\Models\Comment;
+use App\Models\Location;
+use App\Models\Transaction;
+use App\Models\Message;
+use App\Models\Listing;
 
 class User extends Authenticatable
 {
@@ -44,7 +48,23 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-       public function comments() {
+    public function comment() {
         return $this->hasMany(Comment::class);
+    }
+
+    public function location() {
+        return $this->hasOne(Location::class);
+    }
+
+    public function transaction() {
+        return $this->hasMany(Transaction::class);
+    }
+
+    public function message() {
+        return $this->hasMany(Message::class);
+    }
+
+    public function listing() {
+        return $this->hasMany(Listing::class);
     }
 }

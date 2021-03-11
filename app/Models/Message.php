@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\User;
-use App\Models\Listing;
+use App\Models\Transaction;
 
-class Comment extends Model
+class Message extends Model
 {
     use HasFactory;
 
@@ -16,7 +16,7 @@ class Comment extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function listing() {
-        return $this->belongsTo(Listing::class);
+    public function transaction() {
+        return $this->belongsTo(Transaction::class);
     }
 }
