@@ -49,27 +49,31 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function comment() {
+    public function comments() {
         return $this->hasMany(Comment::class);
     }
 
-    public function location() {
-        return $this->hasOne(Location::class);
+    public function locations() {
+        return $this->hasMany(Location::class);
     }
 
-    public function transaction() {
+    public function transactions() {
         return $this->hasMany(Transaction::class);
     }
 
-    public function message() {
-        return $this->hasMany(Message::class);
+    public function messages_sent() {
+        return $this->hasMany(Message::class, 'from_user_id');
     }
 
-    public function listing() {
+    public function messages_recieved() {
+        return $this->hasMany(Message::class, 'to_user_id');
+    }
+
+    public function listings() {
         return $this->hasMany(Listing::class);
     }
 
-    public function picture() {
-        return $this->hasOne(Picture::class);
+    public function pictures() {
+        return $this->hasMany(Picture::class);
     }
 }

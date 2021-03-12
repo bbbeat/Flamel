@@ -17,27 +17,27 @@ class Listing extends Model
 {
     use HasFactory;
 
-    public function comment() {
+    public function comments() {
         return $this->hasMany(Comment::class);
     }
 
-    public function picture() {
+    public function pictures() {
         return $this->hasMany(Picture::class);
     }
 
     public function method_of_transfer() {
-        return $this->hasOne(Method_of_transfer::class);
+        return $this->belongsTo(Method_of_transfer::class);
     }
 
-    public function location() {
-        return $this->hasOne(Location::class);
+    public function locations() {
+        return $this->hasMany(Location::class);
     }
 
     public function user() {
         return $this->belongsTo(User::class);
     }
 
-    public function transaction() {
+    public function transactions() {
         return $this->hasMany(Transaction::class);
     }
 }

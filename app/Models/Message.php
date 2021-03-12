@@ -12,8 +12,12 @@ class Message extends Model
 {
     use HasFactory;
 
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function sender() {
+        return $this->belongsTo(User::class, 'from_user_id');
+    }
+
+    public function reciever() {
+        return $this->belongsTo(User::class, 'to_user_id');
     }
 
     public function transaction() {

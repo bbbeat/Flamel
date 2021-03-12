@@ -11,7 +11,7 @@ class Method_of_transfer extends Model
 {
     use HasFactory;
 
-    public function listing() {
-        return $this->belongsTo(Listing::class);
+    public function listings() {
+        return $this->hasMany(Listing::class);
     }
 }

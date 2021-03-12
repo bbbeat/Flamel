@@ -17,6 +17,8 @@ class CreatePicturesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('listing_id');
             $table->string('picture_name');
+            $table->unsignedBigInteger('user_id');
+            $table->boolean('is_profile');
             $table->timestamps();
         });
     }
