@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 
 import Header from './Header/Header.jsx';
-import BooksListShort from './BooksListShort/BooksListShort.jsx';
-import BookOfTheWeek from './BookOfTheWeek/BookOfTheWeek.jsx';
+import Footer from './Footer/Footer.jsx';
+import Request from './Request/Request.jsx';
+import Provide from './Provide/Provide.jsx';
 import Login from './Login/Login.jsx';
 
 import './index.scss';
@@ -51,19 +52,23 @@ function App() {
     return (
         <Router>
             <>
-                <Header user={ user } />
+                <Header user={user} />
 
                 <main>
 
                     <Switch>
-
+                        {/* 
                         <Route exact path="/home">
                             <BooksListShort />
                             <BookOfTheWeek />
-                        </Route>
+                        </Route> */}
 
                         <Route exact path="/home/login">
-                            <Login setToken={ setToken } />
+                            <Login setToken={setToken} />
+                        </Route>
+
+                        <Route exact path="/home/request">
+                            <Request />
                         </Route>
 
                     </Switch>
