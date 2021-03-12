@@ -13,6 +13,7 @@ use App\Models\Location;
 use App\Models\Transaction;
 use App\Models\Message;
 use App\Models\Listing;
+use App\Models\Picture;
 
 class User extends Authenticatable
 {
@@ -66,5 +67,9 @@ class User extends Authenticatable
 
     public function listing() {
         return $this->hasMany(Listing::class);
+    }
+
+    public function picture() {
+        return $this->hasOne(Picture::class);
     }
 }
