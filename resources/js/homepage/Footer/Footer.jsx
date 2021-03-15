@@ -8,7 +8,7 @@ export default function Footer(props) {
         <footer>
 
             {/* <h1>Flamel<br />Book<br />Database</h1> */}
-{/* 
+            {/* 
             <div className="title-about">
               
             </div> */}
@@ -36,10 +36,10 @@ export default function Footer(props) {
 
 
                 <a href="/about">About Us</a>
-                
+
                 <a href="/contact">Contact Us</a>
 
-        
+
                 {
                     props.user ? (
                         <div className="user-info">
