@@ -7,56 +7,25 @@ export default function Header(props) {
     return (
         <header>
 
-            {/* <h1>Flamel<br />Book<br />Database</h1> */}
-
             <div className="title-logo">
-                <h1>Flamel</h1><br />
-                <h4>Serving a Community of many to a Community of one</h4>
+            <a href="/"><h1>Flamel</h1></a><br />
+                <h6>Serving a Community of many to a Community of one</h6>
             </div>
 
-
             <div className="title-center">
-
-
-
-
                 <div className="title-center-city" >
                     <h2>City</h2>
-
+                    <input type="button" value="Change city"></input>
                 </div>
-
 
                 <div className="title-center-search">
                     <input type="search"></input>
+                    <input type="button" value="Advanced Options"></input>
                     <input type="button" value="Search"></input>
                 </div>
-
-
             </div>
 
-
-
-
-
             <nav>
-
-
-
-                <a href="/">Home</a>
-
-                <a href="/provide">Provide</a>
-
-                <a href="/request">Request</a>
-
-                {/* <a href="/contact">Contact Us</a> */}
-
-
-
-               
-
-
-
-
 
                 {
                     props.user ? (
@@ -65,7 +34,6 @@ export default function Header(props) {
                         </div>
                     ) : <Link to="/home/login">Login</Link>
                 }
-
             </nav>
 
         </header>

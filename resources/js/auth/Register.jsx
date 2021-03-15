@@ -48,8 +48,16 @@ export default function Register(props) {
     return (
         <form action="/register" method="post" onSubmit={ handleSubmit }>
 
-            <label htmlFor="">Name:</label><br />
-            <input type="text" name="name" value={ name } onChange={ handleChange } />
+            <label htmlFor="">Username:</label><br />
+            <input type="text" name="user_name" value={ user_id } onChange={ handleChange } />
+            <br />
+
+            <label htmlFor="">First Name:</label><br />
+            <input type="text" name="first_name" value={ first_name } onChange={ handleChange } />
+            <br />
+
+            <label htmlFor="">Last Name:</label><br />
+            <input type="text" name="last_name" value={ last_name } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Email:</label><br />

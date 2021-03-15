@@ -16,21 +16,8 @@ header {
   color: white;
   padding: 0.5em 1em;
   display: flex;
-}
-
-.top-menu {
-  flex-grow: 1;
-  display: flex;
-}
-.top-menu a {
-  margin-left: 1em;
-  color: white;
-}
-.top-menu a:first-child {
-  margin-left: 0;
-}
-.top-menu .user-info {
-  margin-left: auto;
+  flex-direction: row;
+  align-content: space-between;
 }
 
 .book-browser {
