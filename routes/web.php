@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@home');
 
+Route::get('locations', 'LocationController@index');
+
 Route::get('/books', 'BookController@index');
 
 Route::get('/home', 'IndexController@home');

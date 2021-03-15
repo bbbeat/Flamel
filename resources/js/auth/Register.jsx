@@ -2,9 +2,17 @@ import React, { useState, useEffect } from 'react';
 
 export default function Register(props) {
 
-    const [{email, name, password, password_confirmation}, setValues] = useState({
+    const [locations, setLocation] = useState([]);
+
+    const [{first_name, last_name, email, location_id, birth_date, phone_number, profile_picture, bio, password, password_confirmation}, setValues] = useState({
+        first_name: '',
+        last_name: '',
         email: '',
-        name: '',
+        location_id: '',
+        birth_date: '',
+        phone_number: '',
+        profile_picture: '',
+        bio: '',
         password: '',
         password_confirmation: ''
     })
@@ -13,7 +21,7 @@ export default function Register(props) {
 
         event.preventDefault();
 
-        let request_data = {email, name, password, password_confirmation};
+        let request_data = {first_name, last_name, email, location_id, birth_date, phone_number, profile_picture, bio, password, password_confirmation};
         const response = await fetch('/register', {
             method: 'POST',
             body: JSON.stringify(request_data),
@@ -32,7 +40,7 @@ export default function Register(props) {
     }
 
     const handleChange = (event) => {
-        const allowed_names = ['name', 'email', 'password', 'password_confirmation'],
+        const allowed_names = ['first_name', 'last_name', 'email', 'location_id', 'birth_date', 'phone_number', 'profile_picture', 'bio', 'password', 'password_confirmation'],
               name  = event.target.name,
               value = event.target.value
 
@@ -45,12 +53,23 @@ export default function Register(props) {
         }
     }
 
+    const loadLocations = async () => {
+        const response = await fetch('/locations', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+            }
+        });
+        const response_data = await response.json();
+        setLocation(response_data);
+    }
+    useEffect(() => {
+        loadLocations()
+    }, []);
+
     return (
         <form action="/register" method="post" onSubmit={ handleSubmit }>
-
-            <label htmlFor="">Username:</label><br />
-            <input type="text" name="user_name" value={ user_id } onChange={ handleChange } />
-            <br />
 
             <label htmlFor="">First Name:</label><br />
             <input type="text" name="first_name" value={ first_name } onChange={ handleChange } />
@@ -62,6 +81,34 @@ export default function Register(props) {
 
             <label htmlFor="">Email:</label><br />
             <input type="email" name="email" value={ email } onChange={ handleChange } />
+            <br />
+
+            <label htmlFor="">Location:</label><br />
+            <select  name="last_name" value={ location_id } onChange={ handleChange } >
+                {
+                    locations.map((location) => {
+                        return(
+                            <option key={location.id} value={location.id}>{location.city}</option>
+                        )
+                    })
+                }
+            </select>
+            <br />
+
+            <label htmlFor="">Birth date:</label><br />
+            <input type="date" name="birth_date" value={ birth_date } onChange={ handleChange } />
+            <br />
+
+            <label htmlFor="">Phone Number:</label><br />
+            <input type="text" name="phone_number" value={ phone_number } onChange={ handleChange } />
+            <br />
+
+            <label htmlFor="">Profile Picture:</label><br />
+            <input type="text" name="profile_picture" value={ profile_picture } onChange={ handleChange } />
+            <br />
+
+            <label htmlFor="">About Yourself:</label><br />
+            <input type="text" name="bio" value={ bio } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Password:</label><br />
