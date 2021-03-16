@@ -45,8 +45,16 @@ export default function Header(props) {
 
             <div className="title-center">
                 <div className="title-center-city" >
-                    <h2>{location.id}</h2>
-                    <select name="City">
+                    <h2>
+                    {
+                    props.locations ? (
+                        <div className="city">
+                             { props.locations.city}
+                        </div>
+                    ) : <h2>Prague</h2>
+                }
+                </h2>
+                    <select name="change_city">
                         <option value="" >Change City</option>
                         {
                             locations.map((location) => {
