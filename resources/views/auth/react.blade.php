@@ -4,6 +4,6 @@
 
     <div id="app"></div>
 
-    <script src="{{ mix('js/auth.js') }}"></script>
+    <script src="{{ mix('js/homepage.js') }}"></script>
 
 @endsection

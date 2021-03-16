@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Login(props) {
 
@@ -14,7 +14,7 @@ export default function Login(props) {
         event.preventDefault();
 
         let request_data = {email, password};
-        const response = await fetch('/api/token', {
+        const response = await fetch('/login', {
             method: 'POST',
             body: JSON.stringify(request_data),
             headers: {
@@ -25,13 +25,11 @@ export default function Login(props) {
         });
         const response_data = await response.json();
 
-        props.setToken(response_data.token);
-
-        // if (response.status == 200) {
-        //     location.href = '/';
-        // } else {
-        //     setErrors(response_data.errors);
-        // }
+        if (response.status == 200) {
+            location.href = '/';
+        } else {
+            setErrors(response_data.errors);
+        }
     }
 
     const handleChange = (event) => {
@@ -51,7 +49,7 @@ export default function Login(props) {
     return (
         <form action="/login" method="post" onSubmit={ handleSubmit }>
 
-            <label htmlFor="">Email</label><br/>
+            <label htmlFor="">Email !!!!</label><br/>
             <input type="email" name="email" value={ email } onChange={ handleChange } />
             {
                 errors.email ? (
@@ -69,5 +67,5 @@ export default function Login(props) {
             <button>Login</button>
 
         </form>
-    )
+    );
 }

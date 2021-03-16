@@ -12,21 +12,14 @@ import Request from './Request/Request.jsx';
 import Provide from './Provide/Provide.jsx';
 import Login from './Login/Login.jsx';
 import User from './User/User.jsx';
+import Register from './Register.jsx';
+import CreateListing from './CreateListing.jsx';
 
 import './index.scss';
 
-function App() {
-
-    const [api_token, setApiToken] = useState(localStorage.getItem('api_token'));
+function App() { 
 
     const [user, setUser] = useState(null);
-
-    const setToken = (token) => {
-
-        setApiToken(token);
-
-        localStorage.setItem('api_token', token);
-    }
 
     const loadCurrentUser = async () => {
         console.log('Loading current user information');
@@ -35,7 +28,6 @@ function App() {
             headers: {
                 'Accept': 'application/json',
                 'Content-type': 'application/json',
-                'Authorization': `Bearer ${api_token}`
             }
         });
 
@@ -45,10 +37,8 @@ function App() {
     }
 
     useEffect(() => {
-        if (api_token) {
-            loadCurrentUser();
-        }
-    }, [api_token]);
+            loadCurrentUser(); 
+    }, []);
 
     return (
         <Router>
@@ -56,24 +46,13 @@ function App() {
                 <Header user={user} />
 
                 <main>
-                  
-
-                    
-
+                
                     <Switch>
-                        {/* 
-                        <Route exact path="/home">
-                            <BooksListShort />
-                            <BookOfTheWeek />
-                        </Route> */}
 
-                        <Route exact path="/home/login">
-                            <Login setToken={setToken} />
-                        </Route>
-
-                        <Route exact path="/home/request">
-                            <Request />
-                        </Route>
+                        <Route exact path="/login" children={<Login />} />
+                        <Route exact path="/request" children={ <Request />} />
+                        <Route exact path="/register" children={ <Register /> } /> 
+                        <Route exact path="/createlisting" children={ <CreateListing /> } />
 
                     </Switch>
 

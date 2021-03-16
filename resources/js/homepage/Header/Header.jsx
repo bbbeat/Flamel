@@ -42,14 +42,6 @@ export default function Header(props) {
                     </select>
                 </div>
 
-
-
-
-
-
-
-
-
                 <div className="title-center-search">
                     <input type="search"></input>
                     <input type="button" value="Advanced Options"></input>
@@ -62,7 +54,7 @@ export default function Header(props) {
                 {
                     props.user ? (
                         <div className="user-info">
-                            Logged in as { props.user.name}
+                            Logged in as { props.user.first_name} { props.user.last_name}
                         </div>
                     ) : <Link to="/home/login">Login</Link>
                 }

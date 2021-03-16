@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/api/user', 'Api\UserController@user');
 
 Route::get('/', 'IndexController@home');
 
@@ -48,9 +49,9 @@ Route::get('/register', function() {
 Route::get('/createlisting', function() {
 
     if (Auth::check()) {
-        return redirect('/');
-    } else {
         return view('auth/react');
+    } else {
+        return redirect('/');
     }
 
 })->name('createlisting');

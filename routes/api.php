@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/token', 'Api\UserController@token');
 
 //                                              only if authenticated through Sanctum
-Route::get('/user', 'Api\UserController@user')->middleware('auth:sanctum');
+
 
 //                                                   only if authenticated through Sanctum
 Route::post('/logout', 'Api\UserController@logout')->middleware('auth:sanctum');
