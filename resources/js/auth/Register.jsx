@@ -84,7 +84,8 @@ export default function Register(props) {
             <br />
 
             <label htmlFor="">Location:</label><br />
-            <select  name="last_name" value={ location_id } onChange={ handleChange } >
+            <select  name="location_id" value={ location_id } onChange={ handleChange } >
+                <option value="" >Change City</option>
                 {
                     locations.map((location) => {
                         return(
@@ -96,19 +97,19 @@ export default function Register(props) {
             <br />
 
             <label htmlFor="">Birth date:</label><br />
-            <input type="date" name="birth_date" min="2002-01-01" value={ birth_date } onChange={ handleChange } />
+            <input type="date" name="birth_date"  value={ birth_date } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Phone Number:</label><br />
-            <input type="text" name="phone_number" min="10" max="10" value={ phone_number } onChange={ handleChange } />
+            <input type="text" name="phone_number" min="9" maxLength="13" value={ phone_number } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Profile Picture:</label><br />
-            <input type="text" name="profile_picture" value={ profile_picture } onChange={ handleChange } />
+            <input type="file" name="profile_picture" value={ profile_picture } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">About Yourself:</label><br />
-            <input type="text" name="bio" size="20" value={ bio } onChange={ handleChange } />
+            <textarea type="textarea" name="bio" style={{ resize:'none'}} rows="5" cols="22" resize="none" value={ bio } onChange={ handleChange }></textarea>
             <br />
 
             <label htmlFor="">Password:</label><br />
@@ -122,5 +123,5 @@ export default function Register(props) {
             <button>Register</button>
 
         </form>
-    );
+    ); 
 }

@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-
 export default function Header(props) {
+    const [locations, setLocation] = useState([]);
+
+    const loadLocations = async () => {
+        const response = await fetch('/locations', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+            }
+        });
+        const response_data = await response.json();
+        setLocation(response_data);
+    }
+    useEffect(() => {
+        loadLocations()
+    }, []);
 
     return (
         <header>
@@ -16,12 +31,14 @@ export default function Header(props) {
                 <div className="title-center-city" >
                     <h2>City</h2>
                     <select name="City">
-                        <option value="" selected="">Change City</option>
-                        <option value="city">Brno</option>
-                        <option value="city">Ostrava</option>
-                        <option value="city">Plzeň</option>
-                        <option value="city">Liberec</option>
-                        <option value="city">Olomouc</option>
+                        <option value="" >Change City</option>
+                        {
+                            locations.map((location) => {
+                                return (
+                                    <option key={location.id} value={location.id}>{location.city}</option>
+                                )
+                            })
+                        }
                     </select>
                 </div>
 
