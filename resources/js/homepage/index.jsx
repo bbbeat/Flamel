@@ -11,6 +11,7 @@ import Footer from './Footer/Footer.jsx';
 import Request from './Request/Request.jsx';
 import Provide from './Provide/Provide.jsx';
 import Login from './Login/Login.jsx';
+import User from './User/User.jsx';
 
 import './index.scss';
 
@@ -55,6 +56,9 @@ function App() {
                 <Header user={user} />
 
                 <main>
+                  
+
+                    
 
                     <Switch>
                         {/* 
