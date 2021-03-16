@@ -16,7 +16,7 @@ use App\Models\Transaction;
 class Listing extends Model
 {
     use HasFactory;
-
+    protected $fillable= ['title', 'offer_or_request', 'description', 'location_id', 'method_of_transfer_id', 'price'];
     public function comments() {
         return $this->hasMany(Comment::class);
     }

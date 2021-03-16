@@ -85,7 +85,7 @@ export default function Register(props) {
 
             <label htmlFor="">Location:</label><br />
             <select  name="location_id" value={ location_id } onChange={ handleChange } >
-                <option value="" >Change City</option>
+                <option value="" >Choose Location</option>
                 {
                     locations.map((location) => {
                         return(
@@ -97,7 +97,7 @@ export default function Register(props) {
             <br />
 
             <label htmlFor="">Birth date:</label><br />
-            <input type="date" name="birth_date"  value={ birth_date } onChange={ handleChange } />
+            <input type="date" name="birth_date" max="2002-01-01" value={ birth_date } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Phone Number:</label><br />

@@ -17,6 +17,8 @@ Route::get('/', 'IndexController@home');
 
 Route::get('locations', 'LocationController@index');
 
+Route::get('methods', 'MethodOfTransferController@index');
+
 Route::get('/books', 'BookController@index');
 
 Route::get('/home', 'IndexController@home');
@@ -30,6 +32,8 @@ Route::view('/login', 'auth/react')->name('login');
 // display the view auth/react when user comes to /register with GET
 Route::view('/register', 'auth/react')->name('register');
 
+Route::view('/createlisting', 'auth/react')->name('createlisting');
+
 
 Route::get('/register', function() {
 
@@ -40,3 +44,13 @@ Route::get('/register', function() {
     }
 
 })->name('register');
+
+Route::get('/createlisting', function() {
+
+    if (Auth::check()) {
+        return redirect('/');
+    } else {
+        return view('auth/react');
+    }
+
+})->name('createlisting');

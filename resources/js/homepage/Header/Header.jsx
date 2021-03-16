@@ -29,7 +29,7 @@ export default function Header(props) {
 
             <div className="title-center">
                 <div className="title-center-city" >
-                    <h2>City</h2>
+                    <h2>{location.id}</h2>
                     <select name="City">
                         <option value="" >Change City</option>
                         {
