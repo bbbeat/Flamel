@@ -96,11 +96,11 @@ export default function Register(props) {
             <br />
 
             <label htmlFor="">Birth date:</label><br />
-            <input type="date" name="birth_date" value={ birth_date } onChange={ handleChange } />
+            <input type="date" name="birth_date" min="2002-01-01" value={ birth_date } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Phone Number:</label><br />
-            <input type="text" name="phone_number" value={ phone_number } onChange={ handleChange } />
+            <input type="text" name="phone_number" min="10" max="10" value={ phone_number } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Profile Picture:</label><br />
@@ -108,7 +108,7 @@ export default function Register(props) {
             <br />
 
             <label htmlFor="">About Yourself:</label><br />
-            <input type="text" name="bio" value={ bio } onChange={ handleChange } />
+            <input type="text" name="bio" size="20" value={ bio } onChange={ handleChange } />
             <br />
 
             <label htmlFor="">Password:</label><br />
