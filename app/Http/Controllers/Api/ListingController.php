@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use Auth;
 
 class ListingController extends Controller
 {
@@ -18,7 +19,7 @@ class ListingController extends Controller
             //     'text' => 'required|max:1000'
             // ]);
     
-            $user_id = 1; // change to user_id when login works
+            $user_id = Auth::id(); // change to user_id when login works
     
             
             $listing = new Listing;

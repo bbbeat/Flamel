@@ -19,6 +19,22 @@ export default function Header(props) {
         loadLocations()
     }, []);
 
+    const handleLogout = async (event) => {
+        event.preventDefault();
+        const response = await fetch('/logout', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        });
+       
+        if (response.status < 300) {
+            location.href = '/';
+        }
+    }
+
     return (
         <header>
 
@@ -55,8 +71,11 @@ export default function Header(props) {
                     props.user ? (
                         <div className="user-info">
                             Logged in as { props.user.first_name} { props.user.last_name}
+                            <form action="/logout" method="post" onSubmit={handleLogout}>
+                                <input type="submit" value="Logout" />
+                            </form>
                         </div>
-                    ) : <Link to="/home/login">Login</Link>
+                    ) : <Link to="/login">Login</Link>
                 }
             </nav>
 

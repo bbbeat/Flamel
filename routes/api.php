@@ -28,7 +28,7 @@ Route::post('/token', 'Api\UserController@token');
 //                                                   only if authenticated through Sanctum
 Route::post('/logout', 'Api\UserController@logout')->middleware('auth:sanctum');
 
-Route::post('/createlisting', 'Api\ListingController@create');
+
 
 //      /api/books
 Route::get('/books', 'Api\BookController@index');
