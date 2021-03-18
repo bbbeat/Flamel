@@ -748,7 +748,7 @@ function Listing(props) {
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     loadListing();
-  }, []); // const { listing_id, listing } = props;
+  }, []);
 
   if (listing) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {

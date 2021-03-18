@@ -16,7 +16,6 @@ export default function Listing(props) {
         loadListing(); 
 }, []);
 
-    // const { listing_id, listing } = props;
     if (listing) {
         return (
         
