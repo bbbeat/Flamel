@@ -16,18 +16,13 @@ Route::post('api/createlisting', 'Api\ListingController@create');
 
 Route::get('/api/user', 'Api\UserController@user');
 
+Route::get('/api/listing/{listing_id}', 'Api\ListingController@show');
+
 Route::get('/', 'IndexController@home');
 
 Route::get('locations', 'LocationController@index');
 
 Route::get('methods', 'MethodOfTransferController@index');
-
-Route::get('/books', 'BookController@index');
-
-Route::get('/home', 'IndexController@home');
-Route::get('/home/login', 'IndexController@home');
-
-Route::view('/book/{book_id}/{path?}', 'book/detail')->where(['book_id' => '^\d+$', 'path' => '.*']);
 
 // display the view auth/react when user comes to /login with GET
 Route::view('/login', 'auth/react')->name('login');
@@ -36,6 +31,8 @@ Route::view('/login', 'auth/react')->name('login');
 Route::view('/register', 'auth/react')->name('register');
 
 Route::view('/createlisting', 'auth/react')->name('createlisting');
+
+Route::view('/listing/{listing_id}', 'auth/react');
 
 
 Route::get('/register', function() {

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header(props) {
+    const {user} = props
     const [locations, setLocation] = useState([]);
-
+    const [location_id, setLocation_id] =useState(user ? user.location_id : null) 
     const loadLocations = async () => {
         const response = await fetch('/locations', {
             method: 'GET',
@@ -18,6 +19,11 @@ export default function Header(props) {
     useEffect(() => {
         loadLocations()
     }, []);
+    useEffect(() => {
+        if (props.user) {
+            setLocation_id(props.user.location_id)
+        }
+    }, [props.user]);
 
     const handleLogout = async (event) => {
         event.preventDefault();
@@ -31,10 +37,13 @@ export default function Header(props) {
         });
        
         if (response.status < 300) {
-            location.href = '/';
+            window.location.href = '/';
         }
     }
-
+    const handlesLocationChange = event => {
+        setLocation_id(event.target.value);
+    }
+    const location = locations.find(loc=>loc.id== location_id)
     return (
         <header>
 
@@ -45,16 +54,16 @@ export default function Header(props) {
 
             <div className="title-center">
                 <div className="title-center-city" >
-                    <h2>
+                    <>
                     {
-                    props.locations ? (
+                    location ? (
                         <div className="city">
-                             { props.locations.city}
+                             <h2>{location.city}</h2>
                         </div>
                     ) : <h2>Prague</h2>
                 }
-                </h2>
-                    <select name="change_city">
+                </>
+                    <select name="change_city" onChange={handlesLocationChange}>
                         <option value="" >Change City</option>
                         {
                             locations.map((location) => {

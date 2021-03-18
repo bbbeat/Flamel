@@ -29,8 +29,8 @@ class Listing extends Model
         return $this->belongsTo(Method_of_transfer::class);
     }
 
-    public function locations() {
-        return $this->hasMany(Location::class);
+    public function location() {
+        return $this->belongsTo(Location::class);
     }
 
     public function user() {
