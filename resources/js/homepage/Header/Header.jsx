@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header(props) {
-    const {user} = props
+    const { user } = props
     const [locations, setLocation] = useState([]);
-    const [location_id, setLocation_id] =useState(user ? user.location_id : null) 
+    const [location_id, setLocation_id] = useState(user ? user.location_id : null)
     const loadLocations = async () => {
         const response = await fetch('/locations', {
             method: 'GET',
@@ -35,7 +35,7 @@ export default function Header(props) {
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             }
         });
-       
+
         if (response.status < 300) {
             window.location.href = '/';
         }
@@ -43,7 +43,7 @@ export default function Header(props) {
     const handlesLocationChange = event => {
         setLocation_id(event.target.value);
     }
-    const location = locations.find(loc=>loc.id== location_id)
+    const location = locations.find(loc => loc.id == location_id)
     return (
         <header>
 
@@ -55,14 +55,14 @@ export default function Header(props) {
             <div className="title-center">
                 <div className="title-center-city" >
                     <>
-                    {
-                    location ? (
-                        <div className="city">
-                             <h2>{location.city}</h2>
-                        </div>
-                    ) : <h2>Prague</h2>
-                }
-                </>
+                        {
+                            location ? (
+                                <div className="city">
+                                    <h2>{location.city}</h2>
+                                </div>
+                            ) : <h2>Prague</h2>
+                        }
+                    </>
                     <select name="change_city" onChange={handlesLocationChange}>
                         <option value="" >Change City</option>
                         {
@@ -94,6 +94,14 @@ export default function Header(props) {
                         </div>
                     ) : <Link to="/login">Login</Link>
                 }
+            </nav>
+
+            <nav>
+
+
+                <Link to="/edituser">User</Link>
+
+
             </nav>
 
         </header>

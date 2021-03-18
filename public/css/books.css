@@ -20,6 +20,21 @@ header {
   align-content: space-between;
 }
 
+.top-menu {
+  flex-grow: 1;
+  display: flex;
+}
+.top-menu a {
+  margin-left: 1em;
+  color: white;
+}
+.top-menu a:first-child {
+  margin-left: 0;
+}
+.top-menu .user-info {
+  margin-left: auto;
+}
+
 .book-browser {
   display: flex;
 }

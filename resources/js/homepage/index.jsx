@@ -12,16 +12,15 @@ import Footer from './Footer/Footer.jsx';
 import Request from './Request/Request.jsx';
 import Provide from './Provide/Provide.jsx';
 import Login from './Login/Login.jsx';
-import User from './User/User.jsx';
+import EditUser from './EditUser/EditUser.jsx';
 import Register from './Register.jsx';
 import CreateListing from './CreateListing.jsx';
 import Listing from './Listing.jsx';
 
 import './index.scss';
 
-function App() { 
-    
-    
+function App() {
+
     const [user, setUser] = useState(null);
     
 
@@ -47,10 +46,11 @@ function App() {
                 <Header user={user} />
 
                 <main>
-                
+
                     <Switch>
 
-                        <Route exact path="/login" children={<Login />} />
+                        <Route exact path="/login" children={<Login />} />              
+                        <Route exact path="/edituser" children={<EditUser />} />
                         <Route exact path="/request" children={ <Request />} />
                         <Route exact path="/register" children={ <Register /> } /> 
                         <Route exact path="/createlisting" children={ <CreateListing /> } />
