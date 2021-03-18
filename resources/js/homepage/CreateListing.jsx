@@ -33,7 +33,6 @@ export default function CreateListing(props) {
         
         if (Math.floor(response.status / 100) == 2) { // any kind of 2xx response code
             location.href = `/listing/${response_data[0]}`; // redirect to /
-            // location.reload(); // refresh the current page
         }
     }
 
@@ -93,7 +92,7 @@ export default function CreateListing(props) {
             <br />
             
             <label htmlFor="">Is it an Offer or a Request?</label><br />
-            <select  name="offer_or_request" value={ offer_or_request } onChange={ handleChange } >
+            <select  name="offer_or_request" value={ "offer_or_request" } onChange={ handleChange } >
                 <option value={true} >Offer</option>
                 <option value={false} >Request</option>
             </select>

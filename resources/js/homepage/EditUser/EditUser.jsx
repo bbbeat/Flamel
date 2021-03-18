@@ -121,3 +121,67 @@ export default function EditUser(props) {
         </form>
     );
 }
+                   
+                    // import {
+                    //     Link
+                    // } from 'react-router-dom';
+                    
+                    // export default function Listing(props) {
+                    //     let {listing_id} = useParams();
+                    //     const [listing, setListing] = useState(null);
+                    //     const loadListing = async () => {
+                    //         const response = await fetch(`/api/listing/${listing_id}`);
+                    //         const data = await response.json();
+                    //         setListing(data);
+                    //     }
+                    //     useEffect(() => {
+                    //         loadListing(); 
+                    // }, []);
+                    
+                    //     const { listing_id, listing } = props;
+                    
+                    //     return (
+                    //         <div className="listing-detail">
+                    
+                    //             <div className="listing-detail__top">
+                    //                 <h1 className="listing-detail__title">Title: {listing.title}</h1>
+                    //             </div>
+                    
+                    //             <div className="listing-detail__main">
+                    //                 <div className="listing-detail__left">
+                    //                     <div className="listing-detail__description" >Description:{listing.description}</div>
+                    //                     <div className="listing-detail__offer_or_request" >Offer or a Request:{listing.offer_or_request}</div>
+                    //                     <div className="listing-detail__location" >Location:{listing.location_id}</div>
+                    //                     <div className="listing-detail__method" >Method of Transfer:{listing.method_of_transfer_id}</div>
+                    //                     <div className="listing-detail__price" >Price:{listing.price}</div>  
+                    //                 </div>
+                    
+                    //                 <div className="listing-detail__right">
+                    //                      {/* <div className="listing-detail__image">
+                    //                         <img src={listing.image} alt="" />
+                    //                     </div> */}
+                    //                 </div>
+                    //             </div>
+                    //             <div className="listing-detail__comment">
+                    //                 <h2>Comments</h2>
+                    //                 {/* <Link to={`/listing/${listing.id}/comment`}>Comment on this listing</Link>
+                    //                         {
+                    //                             listing.comments.length ? (
+                    //                                 listing.comments.map(comment => (
+                    //                                     <div className="listing-detail__comment">
+                    //                                         <div className="listing-detail__comment-text">{comment.text}</div>
+                    //                                     </div>
+                    //                                 ))
+                    //                             ) : (
+                    //                                 <p>There are no comments yet. <Link to={`/listing/${listing.id}/comment`}>Be the first one to comment this listing.</Link></p>
+                    //                             )
+                    //                 } */}
+                    
+                    //             </div>
+                    //             <div className="listing-detail__bot">
+                    //                 <input type="button">Make Transaction</input>
+                    //             </div>
+                    
+                    //         </div>
+                    //     )
+                    // }

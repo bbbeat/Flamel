@@ -18,7 +18,7 @@ class Location extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function listing() {
-        return $this->belongsTo(Listing::class);
+    public function listings() {
+        return $this->hasMany(Listing::class);
     }
 }
