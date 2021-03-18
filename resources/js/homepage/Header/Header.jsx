@@ -29,7 +29,7 @@ export default function Header(props) {
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             }
         });
-       
+
         if (response.status < 300) {
             location.href = '/';
         }
@@ -45,15 +45,15 @@ export default function Header(props) {
 
             <div className="title-center">
                 <div className="title-center-city" >
-                    <h2>
-                    {
-                    props.locations ? (
-                        <div className="city">
-                             { props.locations.city}
-                        </div>
-                    ) : <h2>Prague</h2>
-                }
-                </h2>
+                    <>
+                        {
+                            props.locations ? (
+                                <div className="city">
+                                    { props.locations.city}
+                                </div>
+                            ) : <h2>Prague</h2>
+                        }
+                    </>
                     <select name="change_city">
                         <option value="" >Change City</option>
                         {
@@ -85,6 +85,14 @@ export default function Header(props) {
                         </div>
                     ) : <Link to="/login">Login</Link>
                 }
+            </nav>
+
+            <nav>
+
+
+                <Link to="/edituser">User</Link>
+
+
             </nav>
 
         </header>
