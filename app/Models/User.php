@@ -59,12 +59,12 @@ class User extends Authenticatable
         return $this->hasMany(Comment::class);
     }
 
-    public function locations() {
-        return $this->hasMany(Location::class);
+    public function location() {
+        return $this->belongsTo(Location::class);
     }
 
     public function transactions() {
-        return $this->hasMany(Transaction::class);
+        return $this->hasManyThrough(Transaction::class, Listing::class);
     }
 
     public function messages_sent() {

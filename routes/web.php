@@ -12,11 +12,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// api
 Route::post('api/createlisting', 'Api\ListingController@create');
+
+Route::post('api/createcomment/{listing_id}', 'Api\CommentController@create');
 
 Route::get('/api/user', 'Api\UserController@user');
 
+Route::get('/api/user/{user_id}', 'Api\UserController@show');
+
 Route::get('/api/listing/{listing_id}', 'Api\ListingController@show');
+
+// non api
 
 Route::get('/', 'IndexController@home');
 
@@ -24,18 +31,20 @@ Route::get('locations', 'LocationController@index');
 
 Route::get('methods', 'MethodOfTransferController@index');
 
-// display the view auth/react when user comes to /login with GET
 Route::view('/login', 'auth/react')->name('login');
 
-// display the view auth/react when user comes to /register with GET
 Route::view('/register', 'auth/react')->name('register');
 
 Route::view('/createlisting', 'auth/react')->name('createlisting');
 
+Route::view('/createcomment', 'auth/react')->name('createcomment');
+
 Route::view('/listing/{listing_id}', 'auth/react');
 
+Route::view('/user/{user_id}', 'auth/react');
 
-Route::get('/register', function() {
+
+Route::get('/register', function() { // if logged-in redirect home
 
     if (Auth::check()) {
         return redirect('/');
@@ -45,7 +54,7 @@ Route::get('/register', function() {
 
 })->name('register');
 
-Route::get('/createlisting', function() {
+Route::get('/createlisting', function() {  // if not logged-in redirect home
 
     if (Auth::check()) {
         return view('auth/react');
@@ -54,3 +63,13 @@ Route::get('/createlisting', function() {
     }
 
 })->name('createlisting');
+
+Route::get('/createcomment', function() {  // if not logged-in redirect home
+
+    if (Auth::check()) {
+        return view('auth/react');
+    } else {
+        return redirect('/');
+    }
+
+})->name('createcomment');

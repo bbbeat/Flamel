@@ -3,6 +3,7 @@ import {
     useParams
 } from 'react-router-dom';
 import {useState, useEffect} from 'react';
+import Comment from './Comment.jsx';
 
 export default function Listing(props) {
     let {listing_id} = useParams();
@@ -15,10 +16,9 @@ export default function Listing(props) {
     useEffect(() => {
         loadListing(); 
 }, []);
-
+    
     if (listing) {
         return (
-        
             <div className="listing-detail">
     
                 <div className="listing-detail__top">
@@ -27,7 +27,9 @@ export default function Listing(props) {
     
                 <div className="listing-detail__main">
                     <div className="listing-detail__left">
-                        <div className="listing-detail__user" >User: { listing.user  ? listing.user.first_name + ' ' + listing.user.last_name : '-' }</div>
+                        <div className="listing-detail__user" >
+                            User: <a href={"/user/"+listing.user_id}>{ listing.user  ? listing.user.first_name + ' ' + listing.user.last_name : '-' }</a>
+                            </div>
                         <div className="listing-detail__description" >Description: {listing.description}</div>
                         <div className="listing-detail__offer_or_request" >Offer or a Request: {listing.offer_or_request ? 'offer' : 'request'}</div>
                         <div className="listing-detail__location" >Location: {listing.location ? listing.location.city :''}</div>
@@ -42,19 +44,17 @@ export default function Listing(props) {
                     </div>
                 </div>
                 <div className="listing-detail__comment">
-                    <h2>Comments</h2>
-                    {/* <Link to={`/listing/${listing.id}/comment`}>Comment on this listing</Link>
+                    <h2>Comments:</h2>
+                     <Link to={`/createcomment/${listing.id}`}>Comment on this listing</Link>
                             {
-                                listing.comments.length ? (
+                                (listing.comments && listing.comments.length) ? (
                                     listing.comments.map(comment => (
-                                        <div className="listing-detail__comment">
-                                            <div className="listing-detail__comment-text">{comment.text}</div>
-                                        </div>
+                                     <Comment key={comment.id}{...comment}/>   
                                     ))
                                 ) : (
-                                    <p>There are no comments yet. <Link to={`/listing/${listing.id}/comment`}>Be the first one to comment this listing.</Link></p>
+                                    <p>There are no comments yet. <Link to={`/createcomment/${listing.id}`}>Be the first one to comment this listing.</Link></p>
                                 )
-                    } */}
+                    }
     
                 </div>
                 <div className="listing-detail__bot">

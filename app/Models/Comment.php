@@ -11,6 +11,8 @@ use App\Models\Listing;
 class Comment extends Model
 {
     use HasFactory;
+    protected $fillable= ['comment'];
+    
 
     public function user() {
         return $this->belongsTo(User::class);
