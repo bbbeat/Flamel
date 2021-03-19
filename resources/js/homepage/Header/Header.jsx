@@ -48,8 +48,8 @@ export default function Header(props) {
         <header>
 
             <div className="title-logo">
-                <a href=""><h1>Flamel</h1></a><br />
-                <h6>Serving a Community of many to a Community of one</h6>
+                <a href="/"><img src="https://i.ibb.co/6vG2RV0/flamel-logo.png" alt="Flamel"></img></a><br />
+                <h6>A Community driven skills exchange marketplace</h6>
             </div>
 
             <div className="title-center">
@@ -90,18 +90,11 @@ export default function Header(props) {
                             Logged in as { props.user.first_name} { props.user.last_name}
                             <form action="/logout" method="post" onSubmit={handleLogout}>
                                 <input type="submit" value="Logout" />
+                                <button><Link to="/edituser">Edit User</Link></button>
                             </form>
                         </div>
                     ) : <Link to="/login">Login</Link>
                 }
-            </nav>
-
-            <nav>
-
-
-                <Link to="/edituser">User</Link>
-
-
             </nav>
 
         </header>
