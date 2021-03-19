@@ -1,0 +1,30 @@
+footer {
+    background-color: #e0f7e6;
+    color: #e0f7e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 8em;
+    padding: 2em;
+    align-items: center;
+
+   .about {
+       width: 20rem;
+       height: 20rem;
+       background-color: red;
+       flex-wrap: wrap;
+
+   }
+
+   .contact {
+       width: 20rem;
+       height: 20rem;
+       background-color: black;
+       flex-direction: row;
+
+   }
+
+    
+
+
+}

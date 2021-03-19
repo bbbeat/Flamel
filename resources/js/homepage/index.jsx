@@ -15,14 +15,15 @@ import Login from './Login/Login.jsx';
 import EditUser from './EditUser/EditUser.jsx';
 import Register from './Register.jsx';
 import CreateListing from './CreateListing.jsx';
+import ListingPage from './ListingPage/ListingPage';
 import Listing from './Listing.jsx';
 
-import './index.scss';
+// import './index.scss';
 
 function App() {
 
     const [user, setUser] = useState(null);
-    
+
 
     const loadCurrentUser = async () => {
         console.log('Loading current user information');
@@ -35,9 +36,9 @@ function App() {
         const data = await response.json();
         setUser(data.user);
     }
-   
+
     useEffect(() => {
-            loadCurrentUser();
+        loadCurrentUser();
     }, []);
 
     return (
@@ -49,18 +50,21 @@ function App() {
 
                     <Switch>
 
-                        <Route exact path="/login" children={<Login />} />              
+                        <Route exact path="/login" children={<Login />} />
                         <Route exact path="/edituser" children={<EditUser />} />
-                        <Route exact path="/request" children={ <Request />} />
-                        <Route exact path="/register" children={ <Register /> } /> 
-                        <Route exact path="/createlisting" children={ <CreateListing /> } />
+                        <Route exact path="/request" children={<Request />} />
+                        <Route exact path="/register" children={<Register />} />
+                        <Route exact path="/createlisting" children={<CreateListing />} />
+                        {/* <Route exact path="/listingpage" children={<ListingPage />} /> */}
                         <Route exact path="/listing/:listing_id">
                             <Listing />
-                        </Route> 
+                        </Route>
 
                     </Switch>
 
                 </main>
+
+
 
                 <Footer />
             </>

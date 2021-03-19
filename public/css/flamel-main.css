@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext);
+header {
+  background-color: #e0f7e6;
+  color: #e0f7e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-height: 8em;
+  padding: 2em;
+  align-items: center;
+}
+header .title-logo {
+  width: 20rem;
+  height: 20rem;
+  color: #5e6668;
+}
+header .title-center {
+  width: 20rem;
+  height: 20rem;
+  color: #5e6668;
+  align-self: stretch;
+}
+header nav {
+  width: 20rem;
+  height: 20rem;
+  color: #5e6668;
+}
+
+header nav a {
+  align-self: stretch;
+  color: #5e6668;
+  text-decoration: none;
+  margin: 0 1em;
+  border-bottom: 1px solid #a9e8db;
+}
+
+footer {
+  background-color: #e0f7e6;
+  color: #e0f7e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-height: 8em;
+  padding: 2em;
+  align-items: center;
+}
+footer .about {
+  width: 20rem;
+  height: 20rem;
+  background-color: red;
+  flex-wrap: wrap;
+}
+footer .contact {
+  width: 20rem;
+  height: 20rem;
+  background-color: black;
+  flex-direction: row;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=flamel-main.css.map*/

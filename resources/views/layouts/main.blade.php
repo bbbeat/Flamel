@@ -11,7 +11,7 @@
 
     <title>{{ $title ?? '' }} | {{ env('APP_NAME') }}</title>
 
-    <link rel="stylesheet" href="{{ mix('css/books.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/flamel-main.css') }}">
 
     @yield('head_styles')
 </head>
