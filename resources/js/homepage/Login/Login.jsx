@@ -49,7 +49,7 @@ export default function Login(props) {
     return (
         <form action="/login" method="post" onSubmit={ handleSubmit }>
 
-            <label htmlFor="">Email !!!!</label><br/>
+            <label htmlFor="">Email</label><br/>
             <input type="email" name="email" value={ email } onChange={ handleChange } />
             {
                 errors.email ? (

@@ -27,6 +27,6 @@ class ListingController extends Controller
         
     }
     public function show($listing_id) {
-        return Listing::with('method_of_transfer')->with('user')->with('location')->findOrFail($listing_id);
+        return Listing::with('comments.user')->with('comments')->with('method_of_transfer')->with('user')->with('location')->findOrFail($listing_id);
     }
 }

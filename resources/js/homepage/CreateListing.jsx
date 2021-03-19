@@ -88,7 +88,7 @@ export default function CreateListing(props) {
             <br />
 
             <label htmlFor="">Listing Description:</label><br />
-            <input type="text" name="description" value={ description } onChange={ handleChange } />
+            <textarea type="textarea" name="description" style={{ resize: 'none' }} rows="5" cols="22" resize="none" value={description} onChange={handleChange}></textarea>
             <br />
             
             <label htmlFor="">Is it an Offer or a Request?</label><br />

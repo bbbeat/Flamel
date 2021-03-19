@@ -15,8 +15,9 @@ import Login from './Login/Login.jsx';
 import EditUser from './EditUser/EditUser.jsx';
 import Register from './Register.jsx';
 import CreateListing from './CreateListing.jsx';
-import ListingPage from './ListingPage/ListingPage';
+import CreateComment from './CreateComment.jsx';
 import Listing from './Listing.jsx';
+import User from './User/User.jsx';
 
 // import './index.scss';
 
@@ -55,10 +56,9 @@ function App() {
                         <Route exact path="/request" children={<Request />} />
                         <Route exact path="/register" children={<Register />} />
                         <Route exact path="/createlisting" children={<CreateListing />} />
-                        {/* <Route exact path="/listingpage" children={<ListingPage />} /> */}
-                        <Route exact path="/listing/:listing_id">
-                            <Listing />
-                        </Route>
+                        <Route exact path="/createcomment/:listing_id" children={<CreateComment />} />
+                        <Route exact path="/user/:user_id" children={<User />} />
+                        <Route exact path="/listing/:listing_id" children={<Listing />} />
 
                     </Switch>
 
