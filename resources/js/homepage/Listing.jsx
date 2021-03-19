@@ -49,7 +49,7 @@ export default function Listing(props) {
                             {
                                 (listing.comments && listing.comments.length) ? (
                                     listing.comments.map(comment => (
-                                     <Comment key={comment.id}{...comment}/>   
+                                     <Comment key={comment.id}{...comment}/>   //Comment is a component
                                     ))
                                 ) : (
                                     <p>There are no comments yet. <Link to={`/createcomment/${listing.id}`}>Be the first one to comment this listing.</Link></p>

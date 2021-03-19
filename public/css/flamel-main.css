@@ -10,20 +10,35 @@ header {
   align-items: center;
 }
 header .title-logo {
-  width: 20rem;
+  width: 20%;
   height: 20rem;
   color: #5e6668;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+header .title-logo img {
+  width: 5rem;
+  height: 5rem;
 }
 header .title-center {
-  width: 20rem;
+  width: 60%;
   height: 20rem;
   color: #5e6668;
-  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 header nav {
-  width: 20rem;
+  width: 20%;
   height: 20rem;
   color: #5e6668;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 header nav a {

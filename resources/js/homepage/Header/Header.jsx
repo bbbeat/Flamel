@@ -95,7 +95,6 @@ export default function Header(props) {
                         </div>
                     ) : <Link to="/login">Login</Link>
                 }
-                   <Link to="/edituser">User</Link>
             </nav>
 
         </header>

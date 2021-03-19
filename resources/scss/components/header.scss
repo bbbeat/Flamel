@@ -8,31 +8,43 @@ header {
     padding: 2em;
     align-items: center;
 
+
     .title-logo {
-        width: 20rem;
+        width: 20%;
         height: 20rem;
         //background-color: #5e6668;
         color: #5e6668;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        img{
+          width: 5rem;
+          height: 5rem;
+        }
     }
 
     .title-center {
-        width: 20rem;
+        width: 60%;
         height: 20rem;
         //background-color: #5e6668;
         color: #5e6668;
-          align-self: stretch;
-  
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
     }
-
-
-
 
       
     nav {
-        width: 20rem;
+        width: 20%;
         height: 20rem;
         //background-color: #5e6668;
         color: #5e6668;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     }
  
   }
