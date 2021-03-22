@@ -29,4 +29,15 @@ class ListingController extends Controller
     public function show($listing_id) {
         return Listing::with('comments.user')->with('comments')->with('method_of_transfer')->with('user')->with('location')->findOrFail($listing_id);
     }
+    public function showAll() {
+        return Listing::with('method_of_transfer')->with('user')->with('location')->get();
+    }
+
+    public function showRequest() {
+        return Listing::where('offer_or_request', false)->with('method_of_transfer')->with('user')->with('location')->get();
+    }
+
+    public function showOffer() {
+        return Listing::where('offer_or_request', true)->with('method_of_transfer')->with('user')->with('location')->get();
+    }
 }

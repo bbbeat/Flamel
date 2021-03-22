@@ -3,20 +3,20 @@ import {
 } from 'react-router-dom';
 
 import {useState, useEffect} from 'react';
-export default function ShowListings(props) {
-    const [listings, setListings] = useState(null);
-    const loadListings = async () => {
-        const response = await fetch(`/api/listing`);
+export default function showRequests(props) {
+    const [requests, setRequests] = useState(null);
+    const loadRequests = async () => {
+        const response = await fetch(`/api/listing/request`);
         const data = await response.json();
-        setListings(data);
+        setRequests(data);
     }
     useEffect(() => {
-        loadListings(); 
+        loadRequests(); 
 }, []);
-    console.log(listings);
-    if (listings) {
+    console.log(requests);
+    if (requests) {
         return (
-            listings.map(listing=>(
+            requests.map(listing=>(
             <div className="listing-detail" key={listing.id}>
                 <div className="listing-detail__top">
                     <h2 className="listing-detail__title">Title: <a href={"/listing/"+listing.id}>{listing.title}</a></h2>

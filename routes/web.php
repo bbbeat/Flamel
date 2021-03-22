@@ -21,6 +21,12 @@ Route::get('/api/user', 'Api\UserController@user');
 
 Route::get('/api/user/{user_id}', 'Api\UserController@show');
 
+Route::get('/api/listing/', 'Api\ListingController@showAll');
+
+Route::get('/api/listing/request', 'Api\ListingController@showRequest');
+
+Route::get('/api/listing/offer', 'Api\ListingController@showOffer');
+
 Route::get('/api/listing/{listing_id}', 'Api\ListingController@show');
 
 // non api
@@ -42,6 +48,12 @@ Route::view('/createcomment', 'auth/react')->name('createcomment');
 Route::view('/listing/{listing_id}', 'auth/react');
 
 Route::view('/user/{user_id}', 'auth/react');
+
+Route::view('/listings', 'auth/react');
+
+Route::view('/listings/offers', 'auth/react');
+
+Route::view('/listings/requests', 'auth/react');
 
 
 Route::get('/register', function() { // if logged-in redirect home

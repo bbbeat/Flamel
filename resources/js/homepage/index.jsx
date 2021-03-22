@@ -17,6 +17,9 @@ import Register from './Register.jsx';
 import CreateListing from './CreateListing.jsx';
 import CreateComment from './CreateComment.jsx';
 import Listing from './Listing.jsx';
+import ShowListings from './ShowListings.jsx';
+import ShowOffers from './ShowOffers.jsx';
+import ShowRequests from './ShowRequests.jsx';
 import User from './User/User.jsx';
 
 // import './index.scss';
@@ -59,6 +62,9 @@ function App() {
                         <Route exact path="/createcomment/:listing_id" children={<CreateComment />} />
                         <Route exact path="/user/:user_id" children={<User />} />
                         <Route exact path="/listing/:listing_id" children={<Listing />} />
+                        <Route exact path="/listings" children={<ShowListings />} />
+                        <Route exact path="/listings/offers" children={<ShowOffers />} />
+                        <Route exact path="/listings/requests" children={<ShowRequests />} />
 
                     </Switch>
 
