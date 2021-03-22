@@ -9,8 +9,6 @@ import {
 
 import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
-import Request from './Request/Request.jsx';
-import Provide from './Provide/Provide.jsx';
 import Login from './Login/Login.jsx';
 import EditUser from './EditUser/EditUser.jsx';
 import Register from './Register.jsx';
@@ -56,7 +54,6 @@ function App() {
 
                         <Route exact path="/login" children={<Login />} />
                         <Route exact path="/edituser" children={<EditUser />} />
-                        <Route exact path="/request" children={<Request />} />
                         <Route exact path="/register" children={<Register />} />
                         <Route exact path="/createlisting" children={<CreateListing />} />
                         <Route exact path="/createcomment/:listing_id" children={<CreateComment />} />

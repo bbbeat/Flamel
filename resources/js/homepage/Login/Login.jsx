@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function Login(props) {
 
-    const [{email, password}, setValues] = useState({
+    const [{ email, password }, setValues] = useState({
         email: '',
         password: ''
     })
@@ -13,7 +13,7 @@ export default function Login(props) {
 
         event.preventDefault();
 
-        let request_data = {email, password};
+        let request_data = { email, password };
         const response = await fetch('/login', {
             method: 'POST',
             body: JSON.stringify(request_data),
@@ -34,12 +34,13 @@ export default function Login(props) {
 
     const handleChange = (event) => {
         const allowed_names = ['email', 'password'],
-              name  = event.target.name,
-              value = event.target.value
+            name = event.target.name,
+            value = event.target.value
 
         if (-1 !== allowed_names.indexOf(name)) {
             setValues(prev_values => {
-                return ({...prev_values,
+                return ({
+                    ...prev_values,
                     [name]: value
                 });
             });
@@ -47,25 +48,31 @@ export default function Login(props) {
     }
 
     return (
-        <form action="/login" method="post" onSubmit={ handleSubmit }>
+        <div className="login-form">
+            <form action="/login" method="post" onSubmit={handleSubmit}>
+                <div className="login-email">
+                    <label htmlFor="">Email</label><br />
+                    <input type="email" name="email" value={email} onChange={handleChange} />
+                    {
+                        errors.email ? (
+                            errors.email.map(error => (
+                                <div key={error} className="error">{error}</div>
+                            ))
+                        ) : ''
+                    }
+                </div>
 
-            <label htmlFor="">Email</label><br/>
-            <input type="email" name="email" value={ email } onChange={ handleChange } />
-            {
-                errors.email ? (
-                    errors.email.map(error => (
-                        <div key={ error } className="error">{ error }</div>
-                    ))
-                ) : ''
-            }
-            <br/>
+                <br />
+                <div className="login-passworn">
+                    <label htmlFor="">Password</label><br />
+                    <input type="password" name="password" value={password} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Password</label><br/>
-            <input type="password" name="password" value={ password } onChange={ handleChange } />
-            <br/>
-
-            <button>Login</button>
-
-        </form>
+                <div className="login-button">
+                    <button>Login</button>
+                </div>
+            </form>
+        </div>
     );
 }

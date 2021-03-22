@@ -70,59 +70,82 @@ export default function Register(props) {
     }, []);
 
     return (
-        <form action="/register" method="post" onSubmit={handleSubmit}>
+        <div className="register-form">
+            <form action="/register" method="post" onSubmit={handleSubmit}>
+                <div className="register-first-name">
+                    <label htmlFor="">First Name:</label><br />
+                    <input type="text" name="first_name" value={first_name} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">First Name:</label><br />
-            <input type="text" name="first_name" value={first_name} onChange={handleChange} />
-            <br />
+                <div className="register-last-name">
+                    <label htmlFor="">Last Name:</label><br />
+                    <input type="text" name="last_name" value={last_name} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Last Name:</label><br />
-            <input type="text" name="last_name" value={last_name} onChange={handleChange} />
-            <br />
+                <div className="register-email">
+                    <label htmlFor="">Email:</label><br />
+                    <input type="email" name="email" value={email} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Email:</label><br />
-            <input type="email" name="email" value={email} onChange={handleChange} />
-            <br />
+                <div className="register-location">
+                    <label htmlFor="">Location:</label><br />
+                    <select name="location_id" value={location_id} onChange={handleChange} >
+                        <option value="" >Choose Location</option>
+                        {
+                            locations.map((location) => {
+                                return (
+                                    <option key={location.id} value={location.id}>{location.city}</option>
+                                )
+                            })
+                        }
+                    </select>
+                    <br />
+                </div>
 
-            <label htmlFor="">Location:</label><br />
-            <select name="location_id" value={location_id} onChange={handleChange} >
-                <option value="" >Choose Location</option>
-                {
-                    locations.map((location) => {
-                        return (
-                            <option key={location.id} value={location.id}>{location.city}</option>
-                        )
-                    })
-                }
-            </select>
-            <br />
+                <div className="register-date">
+                    <label htmlFor="">Birth date:</label><br />
+                    <input type="date" name="birth_date" max="2002-01-01" value={birth_date} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Birth date:</label><br />
-            <input type="date" name="birth_date" max="2002-01-01" value={birth_date} onChange={handleChange} />
-            <br />
+                <div className="register-phone">
+                    <label htmlFor="">Phone Number:</label><br />
+                    <input type="text" name="phone_number" min="9" maxLength="13" value={phone_number} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Phone Number:</label><br />
-            <input type="text" name="phone_number" min="9" maxLength="13" value={phone_number} onChange={handleChange} />
-            <br />
+                <div className="register-picure">
+                    <label htmlFor="">Profile Picture:</label><br />
+                    <input type="file" name="profile_picture" value={profile_picture} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Profile Picture:</label><br />
-            <input type="file" name="profile_picture" value={profile_picture} onChange={handleChange} />
-            <br />
+                <div className="register-bio">
+                    <label htmlFor="">About Yourself:</label><br />
+                    <textarea type="textarea" name="bio" style={{ resize: 'none' }} rows="5" cols="22" resize="none" value={bio} onChange={handleChange}></textarea>
+                    <br />
+                </div>
 
-            <label htmlFor="">About Yourself:</label><br />
-            <textarea type="textarea" name="bio" style={{ resize: 'none' }} rows="5" cols="22" resize="none" value={bio} onChange={handleChange}></textarea>
-            <br />
+                <div className="register-password">
+                    <label htmlFor="">Password:</label><br />
+                    <input type="password" name="password" value={password} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Password:</label><br />
-            <input type="password" name="password" value={password} onChange={handleChange} />
-            <br />
+                <div className="register-password-confirm">
+                    <label htmlFor="">Confirm password:</label><br />
+                    <input type="password" name="password_confirmation" value={password_confirmation} onChange={handleChange} />
+                    <br />
+                </div>
 
-            <label htmlFor="">Confirm password:</label><br />
-            <input type="password" name="password_confirmation" value={password_confirmation} onChange={handleChange} />
-            <br />
+                <div className="register-button">
+                    <button>Register</button>
+                </div>
 
-            <button>Register</button>
-
-        </form>
+            </form>
+        </div>
     );
 }

@@ -4,8 +4,8 @@ import {
 } from 'react-router-dom';
 
 export default function CreateComment(props) {
-    let {listing_id} = useParams();
-    const [{ comment}, setValues] = useState({
+    let { listing_id } = useParams();
+    const [{ comment }, setValues] = useState({
         comment: ''
     })
 
@@ -14,7 +14,7 @@ export default function CreateComment(props) {
         event.preventDefault();
 
         let request_data = { comment };
-        const response = await fetch('/api/createcomment/'+listing_id, {
+        const response = await fetch('/api/createcomment/' + listing_id, {
             method: 'POST',
             body: JSON.stringify(request_data),
             headers: {
@@ -25,8 +25,8 @@ export default function CreateComment(props) {
         });
         const response_data = await response.json();
 
-        if (Math.floor(response.status / 100) == 2) { 
-            location.href = "/listing/"+listing_id;   
+        if (Math.floor(response.status / 100) == 2) {
+            location.href = "/listing/" + listing_id;
         }
     }
 
@@ -46,12 +46,17 @@ export default function CreateComment(props) {
     }
 
     return (
-        <form action="/createcomment" method="post" onSubmit={handleSubmit}>
-
-            <label htmlFor="">Comment:</label><br />
-            <textarea type="textarea" name="comment" style={{ resize: 'none' }} rows="5" cols="22" resize="none" value={comment} onChange={handleChange}></textarea>
-            <br />
-            <button>Post Comment</button>
-        </form>
+        <div className="cooment-form">
+            <form action="/createcomment" method="post" onSubmit={handleSubmit}>
+                <div className="comment-text">
+                    <label htmlFor="">Comment:</label><br />
+                    <textarea type="textarea" name="comment" style={{ resize: 'none' }} rows="5" cols="22" resize="none" value={comment} onChange={handleChange}></textarea>
+                    <br />
+                </div>
+                <div className="comment-button">
+                    <button>Post Comment</button>
+                </div>
+            </form>
+        </div>
     );
 }
