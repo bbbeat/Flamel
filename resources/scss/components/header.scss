@@ -1,10 +1,11 @@
 header {
-    background-color: #80b0ff;
+    // background-color: #80b0ff;
+    background: #80c9dd;
     color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 8em;
+    min-height: 10rem;
     align-items: center;
     height: 10rem;
     width: 100%;
@@ -50,9 +51,20 @@ header {
             align-items: center;
             margin: 1rem;
             h2 {
-              font-size: 3rem;
+              font-size: 4rem;
               font-weight: 900;
+              margin: 2rem;
             }
+            select {
+               align-self: flex-end;
+              
+            }
+        }
+        .title-center-search {
+          display: flex;
+          flex-direction: row;
+          height: 1.5rem;
+          align-items: flex-start;
         }
     }
 

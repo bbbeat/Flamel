@@ -13,7 +13,7 @@ export default function ShowOffers(props) {
     useEffect(() => {
         loadOffers(); 
 }, []);
-    console.log(offers);
+
     if (offers) {
         return (
             offers.map(listing=>(

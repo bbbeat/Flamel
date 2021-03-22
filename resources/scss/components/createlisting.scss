@@ -1,3 +1,36 @@
-label {
-    color: blue;
+.create-listing-form{
+    height: auto;
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgba($color: lightgrey, $alpha: 0.7);
+    border: 5px solid #62bbd3;
+    border-radius: 30px;
+    padding: 2rem;
+    font-weight: 900;
+    input{
+        border: solid #62bbd3;
+        border-radius: 5px;
+        margin:0.1rem;
+        background-color: #80c9dd;
+    }
+    textarea{
+        border: solid #62bbd3;
+        border-radius: 5px;
+        margin:0.1rem;
+    }
+    select{
+        border: solid #62bbd3;
+        border-radius: 5px;
+        margin:0.1rem; 
+    }
+    button{
+        border: solid #62bbd3;
+        border-radius: 5px;
+        margin-top:1rem; 
+
+    }
 }

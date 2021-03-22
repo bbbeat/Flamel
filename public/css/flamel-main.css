@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext);
 header {
-  background-color: #80b0ff;
+  background: #80c9dd;
   color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 8em;
+  min-height: 10rem;
   align-items: center;
   height: 10rem;
   width: 100%;
@@ -51,8 +51,18 @@ header .title-center .title-center-city {
   margin: 1rem;
 }
 header .title-center .title-center-city h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 900;
+  margin: 2rem;
+}
+header .title-center .title-center-city select {
+  align-self: flex-end;
+}
+header .title-center .title-center-search {
+  display: flex;
+  flex-direction: row;
+  height: 1.5rem;
+  align-items: flex-start;
 }
 header nav {
   width: 15%;
@@ -98,9 +108,9 @@ header nav a .login {
 }
 
 footer {
-  height: 6rem;
+  height: 7rem;
   width: 100%;
-  background-color: #80b0ff;
+  background-color: #80c9dd;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,23 +136,104 @@ footer nav .contact {
   width: 10rem;
 }
 
-label {
-  color: blue;
-}
-
-.register {
+.login-form {
+  height: auto;
+  width: 20rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 2rem;
 }
-.register img {
+
+.register {
+  height: auto;
+  width: 45rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+}
+.register .register-form {
+  padding: 0.5rem;
+}
+.register .register-image img {
   height: 30rem;
   width: 25rem;
 }
 
-label {
-  color: blue;
+.create-listing-form {
+  height: auto;
+  width: 20rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 2rem;
+  font-weight: 900;
+}
+.create-listing-form input {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.create-listing-form textarea {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+}
+.create-listing-form select {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+}
+.create-listing-form button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.offer-detail {
+  height: auto;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.request-detail {
+  height: auto;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 * {
@@ -154,6 +245,7 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-content: center;
 }
 
 body {
@@ -161,7 +253,15 @@ body {
 }
 
 main {
-  flex-grow: 1;
+  height: 63rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #62bbd3;
+  background-image: linear-gradient(30deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(150deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(30deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(150deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(60deg, #d5eaf0 25%, transparent 25.5%, transparent 75%, #d5eaf0 75%, #d5eaf0), linear-gradient(60deg, #d5eaf0 25%, transparent 25.5%, transparent 75%, #d5eaf0 75%, #d5eaf0);
+  background-size: 40px 70px;
+  background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
 }
 
 /*# sourceMappingURL=flamel-main.css.map*/

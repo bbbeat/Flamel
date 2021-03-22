@@ -50,7 +50,7 @@ export default function Header(props) {
         <header>
 
             <div className="title-logo">
-                <a href="/"><img src="https://i.ibb.co/6vG2RV0/flamel-logo.png" alt="Flamel"></img></a><br />
+                <a href="/"><img src="https://i.ibb.co/r7TLJjc/output-onlinepngtools.png" alt="Flamel"></img></a><br />
                 <h5>A Community driven skills exchange marketplace</h5>
             </div>
 

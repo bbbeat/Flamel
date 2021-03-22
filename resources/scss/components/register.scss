@@ -1,10 +1,24 @@
 .register {
+    height: auto;
+    width: 45rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    img{
-        height: 30rem;
-        width: 25rem;
+    align-content: center;
+    background-color: rgba($color: lightgrey, $alpha: 0.7);
+    border: 5px solid #62bbd3;
+    border-radius: 30px;
+    .register-form{
+        // background-color: lightgrey;
+        padding: 0.5rem;
     }
+    .register-image{
+        // background-color: lightgrey;
+        img{
+            height: 30rem;
+            width: 25rem;
+        }
+    }
+    
 }

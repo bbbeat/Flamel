@@ -1307,7 +1307,7 @@ function Header(props) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
         href: "/",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-          src: "https://i.ibb.co/6vG2RV0/flamel-logo.png",
+          src: "https://i.ibb.co/r7TLJjc/output-onlinepngtools.png",
           alt: "Flamel"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
@@ -2308,7 +2308,6 @@ function ShowOffers(props) {
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     loadOffers();
   }, []);
-  console.log(offers);
 
   if (offers) {
     return offers.map(function (listing) {
