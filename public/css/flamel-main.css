@@ -76,6 +76,7 @@ header nav .createlisting {
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 5px, solid, blue;
 }
 header nav .createlisting .create-new-listing {
   font-weight: 900;
