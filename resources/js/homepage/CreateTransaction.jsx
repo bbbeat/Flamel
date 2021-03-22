@@ -3,18 +3,18 @@ import {
     useParams
 } from 'react-router-dom';
 
-export default function CreateComment(props) {
+export default function CreateTransaction(props) {
     let { listing_id } = useParams();
-    const [{ comment }, setValues] = useState({
-        comment: ''
+    const [{ transaction }, setValues] = useState({
+        transaction: ''
     })
 
     const handleSubmit = async (event) => {
 
         event.preventDefault();
 
-        let request_data = { comment };
-        const response = await fetch('/api/createcomment/' + listing_id, {
+        let request_data = { transaction };
+        const response = await fetch('/api/transcation/' + listing_id, {
             method: 'POST',
             body: JSON.stringify(request_data),
             headers: {
@@ -31,7 +31,7 @@ export default function CreateComment(props) {
     }
 
     const handleChange = (event) => {
-        const allowed_names = ['comment'],
+        const allowed_names = ['transaction'],
             name = event.target.name,
             value = event.target.value
 
@@ -46,15 +46,10 @@ export default function CreateComment(props) {
     }
 
     return (
-        <div className="comment-form">
-            <form action="/createcomment" method="post" onSubmit={handleSubmit}>
-                <div className="comment-text">
-                    <label htmlFor="">Comment:</label><br />
-                    <textarea type="textarea" name="comment" style={{ resize: 'none' }} rows="5" cols="22" resize="none" value={comment} onChange={handleChange}></textarea>
-                    <br />
-                </div>
-                <div className="comment-button">
-                    <button>Post Comment</button>
+        <div className="transaction-form">
+            <form action="/createtansaction" method="post" onSubmit={handleSubmit}>
+                <div className="transaction-button">
+                    <button>Create Transaction</button>
                 </div>
             </form>
         </div>

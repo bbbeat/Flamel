@@ -55,6 +55,8 @@ Route::view('/listings/offers', 'auth/react');
 
 Route::view('/listings/requests', 'auth/react');
 
+Route::view('/listing/{listing_id}/transaction/{transaction_id}', 'auth/react');
+
 
 Route::get('/register', function() { // if logged-in redirect home
 
