@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header(props) {
     const { user } = props
+    const [expanded, setExpanded] = useState(false);
     const [locations, setLocation] = useState([]);
     const [location_id, setLocation_id] = useState(user ? user.location_id : null)
     const loadLocations = async () => {
@@ -44,6 +45,7 @@ export default function Header(props) {
         setLocation_id(event.target.value);
     }
     const location = locations.find(loc => loc.id == location_id)
+
     return (
         <header>
 
@@ -76,13 +78,42 @@ export default function Header(props) {
                 </div>
 
                 <div className="title-center-search">
-                    <input type="search"></input>
-                    <input type="button" value="Advanced Options"></input>
+                    <input type="search" id="searchBar" placeholder="Search for a listing"></input>
+                    <form>
+                        <div className="multiselect">
+                            <div className="selectBox" onClick={() => { setExpanded(!expanded) }}>
+                                <select>
+                                    <option >Select an option</option>
+                                </select>
+                            </div>
+                            {
+                                expanded === true && (
+                                    <div id="checkboxes">
+                                        <label>
+                                            <input type="checkbox" id="one" />
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="two" />
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" id="three" />
+                                        </label>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </form>
                     <input type="button" value="Search"></input>
                 </div>
             </div>
 
             <nav>
+                <div className="listings-offers">
+                                <Link to="/listings/offers">View Offers</Link>
+                </div>
+                <div className="listings-requests">
+                                <Link to="/listings/requests">View Requests</Link>
+                </div>
                 <div className="createlisting">
                     {
                         props.user ? (

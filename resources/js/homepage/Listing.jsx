@@ -15,7 +15,7 @@ export default function Listing(props) {
     }
     useEffect(() => {
         loadListing(); 
-}, []);
+    }, []);
     
     if (listing) {
         return (
@@ -60,7 +60,9 @@ export default function Listing(props) {
     
                 </div>
                 <div className="listing-detail__bot">
-                    <button>Make Transaction</button>
+                    <button>
+                    <Link to={`/listing/${listing.id}/transaction`}>Make Transaction</Link>
+                    </button>
                 </div>
     
             </div>

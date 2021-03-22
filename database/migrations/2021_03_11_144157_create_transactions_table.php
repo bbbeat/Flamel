@@ -17,12 +17,12 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('listing_id');
             $table->unsignedBigInteger('b_user_id');
-            $table->dateTime('is_agreed_user_a');
-            $table->dateTime('is_agreed_user_b');
-            $table->dateTime('is_complete_user_a');
-            $table->dateTime('is_complete_user_b');
+            $table->dateTime('is_agreed_user_a')->nullable();
+            $table->dateTime('is_agreed_user_b')->nullable();
+            $table->dateTime('is_complete_user_a')->nullable();
+            $table->dateTime('is_complete_user_b')->nullable();
             $table->string('price');
-            $table->float('rating');
+            $table->float('rating')->nullable();
             $table->timestamps();
         });
     }

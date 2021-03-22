@@ -66,6 +66,7 @@ class User extends Authenticatable
     public function transactions() {
         return $this->hasManyThrough(Transaction::class, Listing::class);
     }
+    
 
     public function messages_sent() {
         return $this->hasMany(Message::class, 'from_user_id');

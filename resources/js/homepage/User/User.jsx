@@ -33,7 +33,7 @@ export default function User(props) {
                         <div className="user-detail__picture" >Picture: {user.profile_picture ? user.profile_picture :''}</div> 
                         <div className="user-detail__listings" >Listings: {user.listings.map(listing=>(
                             <div className="listing">
-                                <div>
+                                <div key={listing.id}>
                                     <div className="listing__title" >
                                         Title: <a href={"/listing/"+listing.id}>{listing.title}</a>
                                         </div>
@@ -44,7 +44,18 @@ export default function User(props) {
                                     <div className="listing__price" >Price: {listing.price}</div>
                                 </div>
                             </div>
-                        ))}</div>
+                            ))}
+                        </div>
+                        <div className="user-detail__transactions" >Transactions: {user.transactions.map(transaction=>(
+                            <div className="transaction">
+                                <div key={transaction.id}>
+                                    <div className="listing__title" >
+                                        Listing: <a href={"/transaction/"+transaction.id}>{transaction.listing_id}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

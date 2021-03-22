@@ -54,11 +54,6 @@ header .title-center .title-center-city h2 {
   font-size: 3rem;
   font-weight: 900;
 }
-header .title-center .title-center-city select {
-  height: 1.3rem;
-  margin: 1rem;
-  align-self: flex-start;
-}
 header nav {
   width: 15%;
   height: 100%;

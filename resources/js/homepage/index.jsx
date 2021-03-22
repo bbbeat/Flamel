@@ -19,6 +19,8 @@ import ShowListings from './ShowListings.jsx';
 import ShowOffers from './ShowOffers.jsx';
 import ShowRequests from './ShowRequests.jsx';
 import User from './User/User.jsx';
+import CreateTransaction from './CreateTransaction.jsx';
+import Transaction from './Transaction.jsx';
 
 // import './index.scss';
 
@@ -62,6 +64,8 @@ function App() {
                         <Route exact path="/listings" children={<ShowListings />} />
                         <Route exact path="/listings/offers" children={<ShowOffers />} />
                         <Route exact path="/listings/requests" children={<ShowRequests />} />
+                        <Route exact path="/listing/:listing_id/transaction" children={<CreateTransaction />} />
+                        <Route exact path="/transaction/:transaction_id" children={<Transaction />} />
 
                     </Switch>
 

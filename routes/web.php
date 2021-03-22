@@ -29,6 +29,9 @@ Route::get('/api/listing/offer', 'Api\ListingController@showOffer');
 
 Route::get('/api/listing/{listing_id}', 'Api\ListingController@show');
 
+Route::post('/api/listing/{listing_id}/createtransaction', 'Api\TransactionController@create');
+
+Route::get('/api/transaction/{transaction_id}', 'Api\TransactionController@show');
 // non api
 
 Route::get('/', 'IndexController@home');
@@ -57,6 +60,9 @@ Route::view('/listings/requests', 'auth/react');
 
 Route::view('/listing/{listing_id}/transaction/{transaction_id}', 'auth/react');
 
+Route::view('/listing/{listing_id}/transaction', 'auth/react');
+
+Route::view('/transaction/{transaction_id}', 'auth/react');
 
 Route::get('/register', function() { // if logged-in redirect home
 
