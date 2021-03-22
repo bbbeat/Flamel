@@ -5,13 +5,15 @@ export default function Footer(props) {
     return (
 
         <footer>
-            <nav className="about">
-                <a href="/about">About Us</a>
-            </nav>
+            <nav>
+                <div className="about">
+                    <a href="/about">About Us</a>
+                </div>
 
 
-            <nav className="contact">
-                <a href="/contact">Contact Us</a>
+                <div className="contact">
+                    <a href="/contact">Contact Us</a>
+                </div>
             </nav>
         </footer>
     );

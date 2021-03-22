@@ -49,7 +49,7 @@ export default function Header(props) {
 
             <div className="title-logo">
                 <a href="/"><img src="https://i.ibb.co/6vG2RV0/flamel-logo.png" alt="Flamel"></img></a><br />
-                <h6>A Community driven skills exchange marketplace</h6>
+                <h5>A Community driven skills exchange marketplace</h5>
             </div>
 
             <div className="title-center">
@@ -63,7 +63,7 @@ export default function Header(props) {
                             ) : <h2>Prague</h2>
                         }
                     </>
-                    <select name="change_city" onChange={handlesLocationChange}>
+                    <select name="change-city" onChange={handlesLocationChange}>
                         <option value="" >Change City</option>
                         {
                             locations.map((location) => {
@@ -83,18 +83,28 @@ export default function Header(props) {
             </div>
 
             <nav>
-
-                {
-                    props.user ? (
-                        <div className="user-info">
-                            Logged in as { props.user.first_name} { props.user.last_name}
-                            <form action="/logout" method="post" onSubmit={handleLogout}>
-                                <input type="submit" value="Logout" />
-                                <button><Link to="/edituser">Edit User</Link></button>
-                            </form>
-                        </div>
-                    ) : <Link to="/login">Login</Link>
-                }
+                <div className="createlisting">
+                    {
+                        props.user ? (
+                            <div className="create-new-listing">
+                                <Link to="/createlisting">Create Listing</Link>
+                            </div>
+                        ) : <Link to="/register">Register</Link>
+                    }
+                </div>
+                <div className="user">
+                    {
+                        props.user ? (
+                            <div className="user-info">
+                                Logged in as { props.user.first_name} { props.user.last_name}
+                                <form action="/logout" method="post" onSubmit={handleLogout}>
+                                    <button><Link to="/edituser">Edit User</Link></button>
+                                    <input type="submit" value="Logout" />
+                                </form>
+                            </div>
+                        ) : <Link className="login" to="/login">Login</Link>
+                    }
+                </div>
             </nav>
 
         </header>

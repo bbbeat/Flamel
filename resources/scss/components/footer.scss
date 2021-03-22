@@ -1,30 +1,28 @@
 footer {
-    background-color: #e0f7e6;
-    color: #e0f7e6;
+    height: 6rem;
+    width: 100%;
+    background-color: #80b0ff;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    min-height: 8em;
-    padding: 2em;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-   .about {
-       width: 20rem;
-       height: 20rem;
-       background-color: red;
-       flex-wrap: wrap;
-
-   }
-
-   .contact {
-       width: 20rem;
-       height: 20rem;
-       background-color: black;
-       flex-direction: row;
-
-   }
-
-    
-
-
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        a {
+            font-weight: 900;
+            font-size: 2rem;
+            text-decoration: none;
+            color: black;
+        }
+        .about {
+            width: 10rem;    
+        }
+        .contact {
+            width: 10rem;
+        }
+    }
 }

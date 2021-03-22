@@ -1,79 +1,164 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext);
 header {
-  background-color: #e0f7e6;
-  color: #e0f7e6;
+  background-color: #80b0ff;
+  color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   min-height: 8em;
-  padding: 2em;
   align-items: center;
+  height: 10rem;
+  width: 100%;
+  margin: 0%;
 }
 header .title-logo {
-  width: 20%;
-  height: 20rem;
-  color: #5e6668;
+  width: 15%;
+  height: 100%;
+  margin: 0%;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  position: relative;
 }
 header .title-logo img {
-  width: 5rem;
-  height: 5rem;
+  width: 7rem;
+  height: 7rem;
+  justify-self: center;
+  position: relative;
+  top: 2rem;
+  left: 30%;
+}
+header .title-logo h5 {
+  text-align: center;
+  font-weight: 700;
 }
 header .title-center {
   width: 60%;
-  height: 20rem;
-  color: #5e6668;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-}
-header nav {
-  width: 20%;
-  height: 20rem;
-  color: #5e6668;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
-
+header .title-center .title-center-city {
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem;
+}
+header .title-center .title-center-city h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+header .title-center .title-center-city select {
+  height: 1.3rem;
+  margin: 1rem;
+  align-self: flex-start;
+}
+header nav {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 900;
+  margin: 1rem;
+}
+header nav .createlisting {
+  margin: 0.5rem;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+header nav .createlisting .create-new-listing {
+  font-weight: 900;
+}
+header nav .user {
+  margin: 0.5rem;
+  height: 6rem;
+  width: 10rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 header nav a {
-  align-self: stretch;
-  color: #5e6668;
+  color: black;
   text-decoration: none;
-  margin: 0 1em;
-  border-bottom: 1px solid #a9e8db;
+}
+header nav a .login {
+  align-self: stretch;
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
 }
 
 footer {
-  background-color: #e0f7e6;
-  color: #e0f7e6;
+  height: 6rem;
+  width: 100%;
+  background-color: #80b0ff;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  min-height: 8em;
-  padding: 2em;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-footer .about {
-  width: 20rem;
-  height: 20rem;
-  background-color: red;
-  flex-wrap: wrap;
-}
-footer .contact {
-  width: 20rem;
-  height: 20rem;
-  background-color: black;
+footer nav {
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+footer nav a {
+  font-weight: 900;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+footer nav .about {
+  width: 10rem;
+}
+footer nav .contact {
+  width: 10rem;
+}
+
+label {
+  color: red;
+}
+
+label {
+  color: red;
+}
+
+label {
+  color: red;
 }
 
 * {
   box-sizing: border-box;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=flamel-main.css.map*/

@@ -46,7 +46,7 @@ function App() {
         <Router>
             <>
                 <Header user={user} />
-
+                
                 <main>
 
                     <Switch>
