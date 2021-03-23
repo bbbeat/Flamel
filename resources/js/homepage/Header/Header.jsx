@@ -103,7 +103,7 @@ export default function Header(props) {
                             }
                         </div>
                     </form>
-                    <input type="button" value="Search"></input>
+                    <input type="button"  value="Search"></input>
                 </div>
             </div>
 

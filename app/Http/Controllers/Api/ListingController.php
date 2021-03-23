@@ -33,11 +33,11 @@ class ListingController extends Controller
         return Listing::with('method_of_transfer')->with('user')->with('location')->get();
     }
 
-    public function showRequest() {
-        return Listing::where('offer_or_request', false)->with('method_of_transfer')->with('user')->with('location')->get();
+    public function showRequest($limit = 10, $offset = 0) {
+        return Listing::offset($offset)->limit($limit)->where('offer_or_request', false)->with('method_of_transfer')->with('user')->with('location')->get();
     }
 
-    public function showOffer() {
-        return Listing::where('offer_or_request', true)->with('method_of_transfer')->with('user')->with('location')->get();
+    public function showOffer($limit = 10, $offset = 0) {
+        return Listing::offset($offset)->limit($limit)->where('offer_or_request', true)->with('method_of_transfer')->with('user')->with('location')->get();
     }
 }

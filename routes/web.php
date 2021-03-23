@@ -23,9 +23,13 @@ Route::get('/api/user/{user_id}', 'Api\UserController@show');
 
 Route::get('/api/listing/', 'Api\ListingController@showAll');
 
-Route::get('/api/listing/request', 'Api\ListingController@showRequest');
+// Route::get('/api/listing/request', 'Api\ListingController@showRequest');
 
-Route::get('/api/listing/offer', 'Api\ListingController@showOffer');
+Route::get('/api/listing/request/{limit}/{offset?}', 'Api\ListingController@showRequest');
+
+// Route::get('/api/listing/offer', 'Api\ListingController@showOffer');
+
+Route::get('/api/listing/offer/{limit?}/{offset?}', 'Api\ListingController@showOffer');
 
 Route::get('/api/listing/{listing_id}', 'Api\ListingController@show');
 

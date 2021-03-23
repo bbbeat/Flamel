@@ -8,7 +8,7 @@ export default function CreateListing(props) {
     const [{ user_id, title, offer_or_request, description, location_id, method_of_transfer_id, price }, setValues] = useState({
         user_id: '',
         title: '',
-        offer_or_request: '',
+        offer_or_request: true,
         description: '',
         location_id: '',
         method_of_transfer_id: '',
@@ -99,7 +99,7 @@ export default function CreateListing(props) {
 
                 <div className="create-listing-offer-or-request">
                     <label htmlFor="">Is it an Offer or a Request?</label><br />
-                    <select name="offer_or_request" value={"offer_or_request"} onChange={handleChange} >
+                    <select name="offer_or_request" value={offer_or_request} onChange={handleChange} >
                         <option value={true} >Offer</option>
                         <option value={false} >Request</option>
                     </select>

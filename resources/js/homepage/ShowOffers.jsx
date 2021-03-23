@@ -5,15 +5,18 @@ import {
 import {useState, useEffect} from 'react';
 export default function ShowOffers(props) {
     const [offers, setOffers] = useState(null);
+    const [offset, setOffset] = useState(0);
     const loadOffers = async () => {
-        const response = await fetch(`/api/listing/offer`);
+        const response = await fetch(`/api/listing/offer/${props.limit}/${offset}`);
         const data = await response.json();
         setOffers(data);
     }
     useEffect(() => {
         loadOffers(); 
-}, []);
-
+    }, [offset]);
+    function nextListings(){
+        setOffset(offset + props.limit)
+    }
     if (offers) {
         return (
             <div className="offers">
@@ -30,6 +33,9 @@ export default function ShowOffers(props) {
                 </div>
             </div>
         ))}
+            {props.displayButton ? <div className="button">
+                <button onClick={nextListings}>Show Next {props.limit} Listings</button>
+            </div> : ''}
         </div>)
     } else {
         return (

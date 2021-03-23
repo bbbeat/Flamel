@@ -22,6 +22,7 @@ import ShowRequests from './ShowRequests.jsx';
 import User from './User/User.jsx';
 import CreateTransaction from './CreateTransaction.jsx';
 import Transaction from './Transaction.jsx';
+import Home from './Home.jsx';
 
 // import './index.scss';
 
@@ -51,17 +52,9 @@ function App() {
             <>
                 <Header user={user} />
                 <main>
-                    <div>
-                        <h2>Offers:</h2>
-                        <ShowOffers />
-                        <Link to="/listings/offers">See more</Link>
-                    </div>
-                    <div>
-                        <h2>Requests:</h2>
-                        <ShowRequests />
-                        <Link to="/listings/requests">See more</Link>
-                    </div>
+                   
                     <Switch>
+                        <Route exact path="/" children={<Home />} />
                         <Route exact path="/login" children={<Login />} />
                         <Route exact path="/edituser" children={<EditUser />} />
                         <Route exact path="/register" children={<Register />} />
@@ -70,8 +63,8 @@ function App() {
                         <Route exact path="/user/:user_id" children={<User />} />
                         <Route exact path="/listing/:listing_id" children={<Listing />} />
                         <Route exact path="/listings" children={<ShowListings />} />
-                        <Route exact path="/listings/offers" children={<ShowOffers />} />
-                        <Route exact path="/listings/requests" children={<ShowRequests />} />
+                        <Route exact path="/listings/offers" component={()=><ShowOffers limit="10" displayButton={true}/>} />
+                        <Route exact path="/listings/requests" component={()=><ShowRequests limit="10"  displayButton={true}/>} />
                         <Route exact path="/listing/:listing_id/transaction" children={<CreateTransaction />} />
                         <Route exact path="/transaction/:transaction_id" children={<Transaction />} />
                     </Switch>

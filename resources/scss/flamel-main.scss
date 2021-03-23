@@ -14,7 +14,7 @@
 }
 
 #app{
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,7 +63,7 @@ main{
         justify-content: center;
         align-items: center;
         align-content: center;
-        background-color: rgba($color: lightgrey, $alpha: 0.7);
+        background-color: rgba($color: white, $alpha: 0.7);
         border: 5px solid #62bbd3;
         border-radius: 30px;
         padding: 0.5rem;
@@ -88,7 +88,7 @@ main{
       justify-content: center;
       align-items: center;
       align-content: center;
-      background-color: rgba($color: lightgrey, $alpha: 0.7);
+      background-color: rgba($color: white, $alpha: 0.7);
       border: 5px solid #62bbd3;
       border-radius: 30px;
       padding: 0.5rem;
