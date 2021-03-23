@@ -129,7 +129,7 @@ export default function Header(props) {
                             <div className="user-info">
                                 Logged in as { props.user.first_name} { props.user.last_name}
                                 <form action="/logout" method="post" onSubmit={handleLogout}>
-                                    <button><Link to="/edituser">Edit User</Link></button>
+                                    <Link to="/edituser">Edit User</Link>
                                     <input type="submit" value="Logout" />
                                 </form>
                             </div>

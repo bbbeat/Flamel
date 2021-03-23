@@ -1,0 +1,39 @@
+.listing-detail {
+    height: auto;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgba($color: lightgrey, $alpha: 0.7);
+    border: 5px solid #62bbd3;
+    border-radius: 30px;
+    padding: 2rem;
+    .listing-detail__comment {
+        height: auto;
+        width: 18rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: rgba($color: white, $alpha: 0.7);
+        border: 5px solid #62bbd3;
+        border-radius: 30px;
+        padding: 1rem;
+        .comment-detail {
+            height: auto;
+            width: 16em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            background-color: rgba($color: lightgrey, $alpha: 0.7);
+            border: 5px solid #62bbd3;
+            border-radius: 30px;
+            padding: 2rem;
+        }
+    }
+}

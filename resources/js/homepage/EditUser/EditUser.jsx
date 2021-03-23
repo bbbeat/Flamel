@@ -84,7 +84,7 @@ export default function EditUser(props) {
     }, []);
 
     return (
-        <form action="/edituser" method="post" onSubmit={handleSubmit}>
+        <form action="/edituser" id="edituser" method="post" onSubmit={handleSubmit}>
 
             <label htmlFor="">First Name:</label><br />
             <input type="text" name="first_name" value={values.first_name} onChange={handleChange} />

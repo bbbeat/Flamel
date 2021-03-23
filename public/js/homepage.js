@@ -1014,6 +1014,7 @@ function EditUser(props) {
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
     action: "/edituser",
+    id: "edituser",
     method: "post",
     onSubmit: handleSubmit,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
@@ -1416,11 +1417,9 @@ function Header(props) {
             action: "/logout",
             method: "post",
             onSubmit: handleLogout,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-                to: "/edituser",
-                children: "Edit User"
-              })
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+              to: "/edituser",
+              children: "Edit User"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "submit",
               value: "Logout"
@@ -2310,35 +2309,38 @@ function ShowOffers(props) {
   }, []);
 
   if (offers) {
-    return offers.map(function (listing) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "offer-detail",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "offer-detail__top",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
-            className: "offer-detail__title",
-            children: ["Title: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-              href: "/listing/" + listing.id,
-              children: listing.title
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "offers",
+      children: offers.map(function (listing) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "offer-detail",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "offer-detail__top",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
+              className: "offer-detail__title",
+              children: ["Title: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                href: "/listing/" + listing.id,
+                children: listing.title
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "offer-detail__user",
+              children: ["User: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                href: "/user/" + listing.user_id,
+                children: listing.user ? listing.user.first_name + ' ' + listing.user.last_name : '-'
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "offer-detail__offer_or_request",
+              children: ["Offer or a Request: ", listing.offer_or_request ? 'offer' : 'request']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "offer-detail__location",
+              children: ["Location: ", listing.location ? listing.location.city : '']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "offer-detail__price",
+              children: ["Price: ", listing.price]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "offer-detail__user",
-            children: ["User: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-              href: "/user/" + listing.user_id,
-              children: listing.user ? listing.user.first_name + ' ' + listing.user.last_name : '-'
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "offer-detail__offer_or_request",
-            children: ["Offer or a Request: ", listing.offer_or_request ? 'offer' : 'request']
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "offer-detail__location",
-            children: ["Location: ", listing.location ? listing.location.city : '']
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "offer-detail__price",
-            children: ["Price: ", listing.price]
-          })]
-        })
-      }, listing.id);
+          })
+        }, listing.id);
+      })
     });
   } else {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2427,38 +2429,40 @@ function showRequests(props) {
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     loadRequests();
   }, []);
-  console.log(requests);
 
   if (requests) {
-    return requests.map(function (listing) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "request-detail",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "request-detail__top",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
-            className: "request-detail__title",
-            children: ["Title: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-              href: "/listing/" + listing.id,
-              children: listing.title
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "requests",
+      children: requests.map(function (listing) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "request-detail",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "request-detail__top",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h2", {
+              className: "request-detail__title",
+              children: ["Title: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                href: "/listing/" + listing.id,
+                children: listing.title
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "request-detail__user",
+              children: ["User: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+                href: "/user/" + listing.user_id,
+                children: listing.user ? listing.user.first_name + ' ' + listing.user.last_name : '-'
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "request-detail__offer_or_request",
+              children: ["Offer or a Request: ", listing.offer_or_request ? 'offer' : 'request']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "request-detail__location",
+              children: ["Location: ", listing.location ? listing.location.city : '']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "request-detail__price",
+              children: ["Price: ", listing.price]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "request-detail__user",
-            children: ["User: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-              href: "/user/" + listing.user_id,
-              children: listing.user ? listing.user.first_name + ' ' + listing.user.last_name : '-'
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "request-detail__offer_or_request",
-            children: ["Offer or a Request: ", listing.offer_or_request ? 'offer' : 'request']
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "request-detail__location",
-            children: ["Location: ", listing.location ? listing.location.city : '']
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            className: "request-detail__price",
-            children: ["Price: ", listing.price]
-          })]
-        })
-      }, listing.id);
+          })
+        }, listing.id);
+      })
     });
   } else {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {

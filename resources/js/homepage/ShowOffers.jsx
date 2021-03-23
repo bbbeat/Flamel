@@ -16,7 +16,8 @@ export default function ShowOffers(props) {
 
     if (offers) {
         return (
-            offers.map(listing=>(
+            <div className="offers">
+            {offers.map(listing=>(
             <div className="offer-detail" key={listing.id}>
                 <div className="offer-detail__top">
                     <h2 className="offer-detail__title">Title: <a href={"/listing/"+listing.id}>{listing.title}</a></h2>
@@ -28,7 +29,8 @@ export default function ShowOffers(props) {
                     <div className="offer-detail__price" >Price: {listing.price}</div>  
                 </div>
             </div>
-        )))
+        ))}
+        </div>)
     } else {
         return (
             <div>Loading</div>

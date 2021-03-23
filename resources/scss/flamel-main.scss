@@ -6,6 +6,8 @@
 @import 'components/createlisting.scss';
 @import 'components/showoffers.scss';
 @import 'components/showrequests.scss';
+@import 'components/edituser.scss';
+@import 'components/listing.scss';
 
 * {
   box-sizing: border-box;
@@ -16,18 +18,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-content: center;
+  align-content: center; 
 }
 body{
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  input{
+    font-family: 'Open Sans', sans-serif;
+  }
 }
 
 $color2: #80c9dd;
 $color3: #d5eaf0;
 $color1: #62bbd3;
 main{
-  // flex-grow: 1;
-  height:63rem;
+   flex-grow: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

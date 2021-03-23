@@ -13,10 +13,10 @@ export default function showRequests(props) {
     useEffect(() => {
         loadRequests(); 
 }, []);
-    console.log(requests);
     if (requests) {
         return (
-            requests.map(listing=>(
+            <div className="requests">
+            {requests.map(listing=>(
             <div className="request-detail" key={listing.id}>
                 <div className="request-detail__top">
                     <h2 className="request-detail__title">Title: <a href={"/listing/"+listing.id}>{listing.title}</a></h2>
@@ -28,7 +28,8 @@ export default function showRequests(props) {
                     <div className="request-detail__price" >Price: {listing.price}</div>  
                 </div>
             </div>
-        )))
+        ))}</div>
+        )
     } else {
         return (
             <div>Loading</div>
