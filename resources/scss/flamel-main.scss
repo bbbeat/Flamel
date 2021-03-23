@@ -21,6 +21,7 @@
   align-content: center; 
 }
 body{
+  height: 100%;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   input{
@@ -32,8 +33,8 @@ $color2: #80c9dd;
 $color3: #d5eaf0;
 $color1: #62bbd3;
 main{
-   flex-grow: 1;
-
+  flex-grow: 1;
+  margin: 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,6 +48,56 @@ main{
   linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3);
   background-size:40px 70px;
   background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+  .offers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 80rem;
+    .offer-detail {
+        height: auto;
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color: rgba($color: lightgrey, $alpha: 0.7);
+        border: 5px solid #62bbd3;
+        border-radius: 30px;
+        padding: 0.5rem;
+        margin: 0.5rem;
+        .offer-detail__title{
+          margin: 0%;
+        }
+    }
+}
+.requests {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 80rem; 
+  .request-detail {
+      height: auto;
+      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      background-color: rgba($color: lightgrey, $alpha: 0.7);
+      border: 5px solid #62bbd3;
+      border-radius: 30px;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      .request-detail__title{
+          margin: 0%;
+      }
+  }
+}
 }
 
 

@@ -4,7 +4,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useParams
+    useParams,
+    Link
 } from "react-router-dom";
 
 import Header from './Header/Header.jsx';
@@ -49,11 +50,18 @@ function App() {
         <Router>
             <>
                 <Header user={user} />
-                
                 <main>
-
+                    <div>
+                        <h2>Offers:</h2>
+                        <ShowOffers />
+                        <Link to="/listings/offers">See more</Link>
+                    </div>
+                    <div>
+                        <h2>Requests:</h2>
+                        <ShowRequests />
+                        <Link to="/listings/requests">See more</Link>
+                    </div>
                     <Switch>
-
                         <Route exact path="/login" children={<Login />} />
                         <Route exact path="/edituser" children={<EditUser />} />
                         <Route exact path="/register" children={<Register />} />
@@ -66,13 +74,8 @@ function App() {
                         <Route exact path="/listings/requests" children={<ShowRequests />} />
                         <Route exact path="/listing/:listing_id/transaction" children={<CreateTransaction />} />
                         <Route exact path="/transaction/:transaction_id" children={<Transaction />} />
-
                     </Switch>
-
                 </main>
-
-
-
                 <Footer />
             </>
         </Router>

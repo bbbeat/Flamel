@@ -33,6 +33,7 @@ header .title-logo img {
 header .title-logo h5 {
   text-align: center;
   font-weight: 700;
+  margin: 1rem;
 }
 header .title-center {
   width: auto;
@@ -42,6 +43,7 @@ header .title-center {
   justify-content: center;
   align-items: center;
   position: relative;
+  left: 5%;
 }
 header .title-center .title-center-city {
   height: 3rem;
@@ -130,6 +132,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 footer nav {
   display: flex;
@@ -137,18 +140,28 @@ footer nav {
   justify-content: center;
   align-items: center;
   width: 40%;
+  margin: 0%;
 }
 footer nav a {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: black;
+  margin: 0%;
 }
 footer nav .about {
   width: 12rem;
+  margin: 0%;
 }
 footer nav .contact {
   width: 12rem;
+  margin: 0%;
+}
+footer nav .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-form {
@@ -243,6 +256,9 @@ footer nav .contact {
   padding: 0.5rem;
   margin: 0.5rem;
 }
+.offers .offer-detail .offer-detail__title {
+  margin: 0%;
+}
 
 .requests {
   display: flex;
@@ -265,6 +281,9 @@ footer nav .contact {
   border-radius: 30px;
   padding: 0.5rem;
   margin: 0.5rem;
+}
+.requests .request-detail .request-detail__title {
+  margin: 0%;
 }
 
 #edituser {
@@ -333,6 +352,7 @@ footer nav .contact {
 }
 
 body {
+  height: 100%;
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
@@ -342,6 +362,7 @@ body input {
 
 main {
   flex-grow: 1;
+  margin: 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -350,6 +371,56 @@ main {
   background-image: linear-gradient(30deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(150deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(30deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(150deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(60deg, #d5eaf0 25%, transparent 25.5%, transparent 75%, #d5eaf0 75%, #d5eaf0), linear-gradient(60deg, #d5eaf0 25%, transparent 25.5%, transparent 75%, #d5eaf0 75%, #d5eaf0);
   background-size: 40px 70px;
   background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+}
+main .offers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 80rem;
+}
+main .offers .offer-detail {
+  height: auto;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+main .offers .offer-detail .offer-detail__title {
+  margin: 0%;
+}
+main .requests {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 80rem;
+}
+main .requests .request-detail {
+  height: auto;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(211, 211, 211, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+main .requests .request-detail .request-detail__title {
+  margin: 0%;
 }
 
 /*# sourceMappingURL=flamel-main.css.map*/

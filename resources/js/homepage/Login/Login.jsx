@@ -68,7 +68,7 @@ export default function Login(props) {
                     <input type="password" name="password" value={password} onChange={handleChange} />
                     <br />
                 </div>
-
+                <br />
                 <div className="login-button">
                     <button>Login</button>
                 </div>
