@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <header>
+    {{-- <header>
 
         @include('common.topmenu', [
             'current' => $current_menu_item ?? null
@@ -25,7 +25,7 @@
 
     </header>
 
-    @include('common.alerts')
+    @include('common.alerts') --}}
 
     <main>
 
