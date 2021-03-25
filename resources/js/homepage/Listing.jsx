@@ -38,26 +38,31 @@ export default function Listing(props) {
                     </div>
     
                     <div className="listing-detail__right">
-                         {/* <div className="listing-detail__image">
-                            <img src={listing.image} alt="" />
-                        </div> */}
+                          <div className="listing-detail__image">
+                          <img src="https://i.ibb.co/1Lq385g/placeholder.jpg" alt="placeholder" border="0"></img>
+                          <img src="https://i.ibb.co/1Lq385g/placeholder.jpg" alt="placeholder" border="0"></img>
+                        </div> 
                     </div>
                 </div>
                 <div className="listing-detail__comment">
                     <h2>Comments:</h2>
-                            {
+                   
+                        {
                                 (listing.comments && listing.comments.length) ? (
                                     <>
                                     <Link to={`/createcomment/${listing.id}`}>Comment on this listing</Link>
+                                    <div className="comments-list">
                                     {listing.comments.map(comment => (  
                                      <Comment key={comment.id}{...comment}/>   //Comment is a component
                                     ))}
+                                    </div>
                                     </>
                                 ) : (
                                     <p>There are no comments yet. <Link to={`/createcomment/${listing.id}`}>Be the first one to comment this listing.</Link></p>
                                 )
-                    }
-    
+                                
+                        }
+                    
                 </div>
                 <div className="listing-detail__bot">
                     <button>

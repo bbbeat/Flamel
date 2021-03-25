@@ -1,0 +1,17 @@
+.link {
+    float:right;
+    height: 5rem;
+    width: 8rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba($color: white, $alpha: 0.7);
+    border: 5px solid #62bbd3;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+}

@@ -1,5 +1,6 @@
-.register{
+.transaction-form{
     height: auto;
+    width: 15rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -10,25 +11,16 @@
     border-radius: 30px;
     padding: 1rem;
     font-weight: 900;
-    .register-form{
-        margin-right: 1rem;
+    margin-right: 1rem;
+        label{
+            margin: 1rem;  
+        }
         input{
             border: solid #62bbd3;
             border-radius: 5px;
             margin:0.1rem;
             background-color: #80c9dd;
-        }
-        textarea{
-            border: solid #62bbd3;
-            border-radius: 5px;
-            margin:0.1rem;
-            background-color: #80c9dd;
-        }
-        select{
-            border: solid #62bbd3;
-            border-radius: 5px;
-            margin:0.1rem; 
-            background-color: #80c9dd;
+            margin: 1rem;
         }
         button{
             border: solid #62bbd3;
@@ -36,14 +28,7 @@
             margin-top:1rem; 
             font-family: 'Varela Round', sans-serif;
             background-color: #80c9dd;
-            font-weight: 900;  
+            font-weight: 900;
+            margin: 1rem; 
         }
-    }
-    .register-image{
-        img{
-            height: 40rem;
-            width: 30rem;
-            border-radius: 10px;
-        }
-    }
 }

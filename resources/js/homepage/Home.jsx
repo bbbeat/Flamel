@@ -11,12 +11,12 @@ export default function Home() {
             <div>
                 <h2>Offers:</h2>
                 <ShowOffers limit="5" offset="0" displayButton={false}/>
-                <Link to="/listings/offers">See more</Link>
+                <Link className="link" to="/listings/offers">See more</Link>
             </div>
             <div>
                 <h2>Requests:</h2>
                 <ShowRequests limit="5" offset="0" displayButton={false} />
-                <Link to="/listings/requests">See more</Link>
+                <Link className="link" to="/listings/requests">See more</Link>
             </div>
     </>
     )

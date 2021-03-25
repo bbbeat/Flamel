@@ -48,7 +48,8 @@ export default function Login(props) {
     }
 
     return (
-        <div className="login-form">
+        <div className="login-container">
+            <div className="login-form">
             <form action="/login" method="post" onSubmit={handleSubmit}>
                 <div className="login-email">
                     <label htmlFor="">Email</label><br />
@@ -63,7 +64,7 @@ export default function Login(props) {
                 </div>
 
                 <br />
-                <div className="login-passworn">
+                <div className="login-password">
                     <label htmlFor="">Password</label><br />
                     <input type="password" name="password" value={password} onChange={handleChange} />
                     <br />
@@ -73,6 +74,10 @@ export default function Login(props) {
                     <button>Login</button>
                 </div>
             </form>
+            </div>
+            <div className="login-image">
+                <img src="https://images.unsplash.com/photo-1601342550687-2bb6dda846fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt=""></img> 
+            </div>
         </div>
     );
 }

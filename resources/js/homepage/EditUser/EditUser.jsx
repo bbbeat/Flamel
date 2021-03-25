@@ -53,21 +53,6 @@ export default function EditUser(props) {
         }
     }
 
-    // const loadLocations = async () => {
-    //     const response = await fetch('/locations', {
-    //         method: 'GET',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-type': 'application/json',
-    //         }
-    //     });
-    //     const response_data = await response.json();
-    //     setLocation(response_data);
-    // }
-    // useEffect(() => {
-    //     loadLocations()
-    // }, []);
-
     const loadUser = async () => {
         const response = await fetch('/user', {
             method: 'GET',
@@ -84,104 +69,35 @@ export default function EditUser(props) {
     }, []);
 
     return (
-        <form action="/edituser" id="edituser" method="post" onSubmit={handleSubmit}>
+        <div className="editUser">
+            <div className="editUser-form">
+                <form action="/edituser" id="edituser" method="post" onSubmit={handleSubmit}>
 
-            <label htmlFor="">First Name:</label><br />
-            <input type="text" name="first_name" value={values.first_name} onChange={handleChange} />
-            <br />
+                    <label htmlFor="">First Name:</label><br />
+                    <input type="text" name="first_name" value={values.first_name} onChange={handleChange} />
+                    <br />
 
-            <label htmlFor="">Last Name:</label><br />
-            <input type="text" name="last_name" value={values.last_name} onChange={handleChange} />
-            <br />
+                    <label htmlFor="">Last Name:</label><br />
+                    <input type="text" name="last_name" value={values.last_name} onChange={handleChange} />
+                    <br />
 
-            {/* <label htmlFor="">Location:</label><br />
-            <select name="location_id" value={location_id} onChange={handleChange} >
-                <option value="" >Choose Location</option>
-                {
-                    locations.map((location) => {
-                        return (
-                            <option key={location.id} value={location.id}>{location.city}</option>
-                        )
-                    })
-                }
-            </select>
-            <br /> */}
+                    <label htmlFor="">Profile Picture:</label><br />
+                    <input type="file" name="profile_picture" value={values.profile_picture} onChange={handleChange} />
+                    <br />
 
-            <label htmlFor="">Profile Picture:</label><br />
-            <input type="file" name="profile_picture" value={values.profile_picture} onChange={handleChange} />
-            <br />
+                    <label htmlFor="">About Yourself:</label><br />
+                    <textarea type="textarea" name="bio" style={{ resize: 'none' }} value={values.bio} rows="5" cols="22" resize="none" onChange={handleChange}></textarea>
+                    <br />
+                    <div className="register-button">
+                        <button>Register</button>
+                    </div>
+                </form>
+            </div>
+            <div className="editUser-image">
+                <img src="https://images.unsplash.com/photo-1553976166-ed1f57de4813?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""></img>
+            </div>
+        </div>
 
-            <label htmlFor="">About Yourself:</label><br />
-            <textarea type="textarea" name="bio" style={{ resize: 'none' }} value={values.bio} rows="5" cols="22" resize="none" onChange={handleChange}></textarea>
-
-            <br />
-
-
-
-        </form>
     );
 }
-                   
-                    // import {
-                    //     Link
-                    // } from 'react-router-dom';
-                    
-                    // export default function Listing(props) {
-                    //     let {listing_id} = useParams();
-                    //     const [listing, setListing] = useState(null);
-                    //     const loadListing = async () => {
-                    //         const response = await fetch(`/api/listing/${listing_id}`);
-                    //         const data = await response.json();
-                    //         setListing(data);
-                    //     }
-                    //     useEffect(() => {
-                    //         loadListing(); 
-                    // }, []);
-                    
-                    //     const { listing_id, listing } = props;
-                    
-                    //     return (
-                    //         <div className="listing-detail">
-                    
-                    //             <div className="listing-detail__top">
-                    //                 <h1 className="listing-detail__title">Title: {listing.title}</h1>
-                    //             </div>
-                    
-                    //             <div className="listing-detail__main">
-                    //                 <div className="listing-detail__left">
-                    //                     <div className="listing-detail__description" >Description:{listing.description}</div>
-                    //                     <div className="listing-detail__offer_or_request" >Offer or a Request:{listing.offer_or_request}</div>
-                    //                     <div className="listing-detail__location" >Location:{listing.location_id}</div>
-                    //                     <div className="listing-detail__method" >Method of Transfer:{listing.method_of_transfer_id}</div>
-                    //                     <div className="listing-detail__price" >Price:{listing.price}</div>  
-                    //                 </div>
-                    
-                    //                 <div className="listing-detail__right">
-                    //                      {/* <div className="listing-detail__image">
-                    //                         <img src={listing.image} alt="" />
-                    //                     </div> */}
-                    //                 </div>
-                    //             </div>
-                    //             <div className="listing-detail__comment">
-                    //                 <h2>Comments</h2>
-                    //                 {/* <Link to={`/listing/${listing.id}/comment`}>Comment on this listing</Link>
-                    //                         {
-                    //                             listing.comments.length ? (
-                    //                                 listing.comments.map(comment => (
-                    //                                     <div className="listing-detail__comment">
-                    //                                         <div className="listing-detail__comment-text">{comment.text}</div>
-                    //                                     </div>
-                    //                                 ))
-                    //                             ) : (
-                    //                                 <p>There are no comments yet. <Link to={`/listing/${listing.id}/comment`}>Be the first one to comment this listing.</Link></p>
-                    //                             )
-                    //                 } */}
-                    
-                    //             </div>
-                    //             <div className="listing-detail__bot">
-                    //                 <input type="button">Make Transaction</input>
-                    //             </div>
-                    
-                    //         </div>
-                    //     )
-                    // }
+

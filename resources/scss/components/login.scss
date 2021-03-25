@@ -1,13 +1,39 @@
-.login-form{
+.login-container{
     height: auto;
-    width: 20rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     align-content: center;
-    background-color: rgba($color: lightgrey, $alpha: 0.7);
+    background-color: rgba($color: white, $alpha: 0.7);
     border: 5px solid #62bbd3;
     border-radius: 30px;
-    padding: 2rem;
+    padding: 1rem;
+    font-weight: 900;
+    .login-form{
+        margin-right: 1rem;
+        margin-top: 3rem;
+        input{
+            border: solid #62bbd3;
+            border-radius: 5px;
+            margin:0.1rem;
+            background-color: #80c9dd;
+        }
+        button{
+            border: solid #62bbd3;
+            border-radius: 5px;
+            margin-top:1rem; 
+            font-family: 'Varela Round', sans-serif;
+            background-color: #80c9dd;
+            font-weight: 900;  
+        }
+    }
+    .login-image{
+        img{
+            height: 40rem;
+            width: 30rem;
+            border-radius: 10px;
+        }
+    }
 }
+    

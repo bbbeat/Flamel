@@ -145,11 +145,10 @@ export default function Register(props) {
                     <div className="register-button">
                         <button>Register</button>
                     </div>
-
                 </form>
             </div>
             <div className="register-image">
-                <img src="https://i.ibb.co/6vG2RV0/flamel-logo.png" alt=""></img> 
+                <img src="https://i.ibb.co/TWN3My9/jacky-chiu-kf2-Z44k7-Ng-unsplash-3.jpg" alt=""></img> 
             </div>
         </div>
     );

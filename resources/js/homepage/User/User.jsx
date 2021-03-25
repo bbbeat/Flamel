@@ -30,8 +30,14 @@ export default function User(props) {
                         <div className="user-detail__email" >Email: {user.email}</div>
                         <div className="user-detail__location" >Location: {user.location ? user.location.city :''}</div>
                         <div className="user-detail__bio" >Bio: {user.bio}</div>
-                        <div className="user-detail__picture" >Picture: {user.profile_picture ? user.profile_picture :''}</div> 
-                        <div className="user-detail__listings" >Listings: {user.listings.map(listing=>(
+                    </div>
+                    <div className="user-detail__right">
+                        <h4>Picture:</h4> {user.profile_picture ? user.profile_picture :<img src="https://i.ibb.co/1Lq385g/placeholder.jpg" alt="placeholder" ></img>}
+                    </div>
+                </div>
+                <div className="user-detail__listingsandtransactions">  
+                        <div className="user-detail__listings" >
+                            <h4>Listings:</h4> {user.listings.map(listing=>(
                             <div className="listing">
                                 <div key={listing.id}>
                                     <div className="listing__title" >
@@ -46,7 +52,8 @@ export default function User(props) {
                             </div>
                             ))}
                         </div>
-                        <div className="user-detail__transactions" >Transactions: {user.transactions.map(transaction=>(
+                        <div className="user-detail__transactions" >
+                            <h4>Transactions:</h4> {user.transactions.map(transaction=>(
                             <div className="transaction">
                                 <div key={transaction.id}>
                                     <div className="listing__title" >
@@ -56,8 +63,8 @@ export default function User(props) {
                             </div>
                             ))}
                         </div>
-                    </div>
-                </div>
+                </div>     
+                
             </div>
         )
     } else {

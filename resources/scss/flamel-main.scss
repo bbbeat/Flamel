@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Varela+Round&display=swap");
+
 @import 'components/header.scss';
 @import 'components/footer.scss';
 @import 'components/login.scss';
@@ -8,6 +10,11 @@
 @import 'components/showrequests.scss';
 @import 'components/edituser.scss';
 @import 'components/listing.scss';
+@import 'components/home.scss';
+@import 'components/createcomment.scss';
+@import 'components/createtransaction.scss';
+@import 'components/user.scss';
+@import 'components/transaction.scss';
 
 html {
   height: 100%;
@@ -18,14 +25,14 @@ html {
 
  #app{
   min-height: 100%;
-//   width: 100%; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center; 
+  font-family: 'Varela Round', sans-serif;
  }
 body{
-  // min-height: 100%;
+  background: #80c9dd;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,56 +64,6 @@ main{
   linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3);
   background-size:40px 70px;
   background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
-  .offers {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    width: 80rem;
-    .offer-detail {
-        height: auto;
-        width: 15rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        background-color: rgba($color: white, $alpha: 0.7);
-        border: 5px solid #62bbd3;
-        border-radius: 30px;
-        padding: 0.5rem;
-        margin: 0.5rem;
-        .offer-detail__title{
-          margin: 0%;
-        }
-    }
-}
-.requests {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  width: 80rem; 
-  .request-detail {
-      height: auto;
-      width: 15rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      background-color: rgba($color: white, $alpha: 0.7);
-      border: 5px solid #62bbd3;
-      border-radius: 30px;
-      padding: 0.5rem;
-      margin: 0.5rem;
-      .request-detail__title{
-          margin: 0%;
-      }
-  }
-}
 }
 
 

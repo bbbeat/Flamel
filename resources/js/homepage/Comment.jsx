@@ -9,7 +9,7 @@ export default function Comment(props) {
                             User: <a href={"/user/"+comment.user_id}>{ comment.user  ? comment.user.first_name + ' ' + comment.user.last_name : '-' }</a>
                             </div>
                         <div className="comment-detail__comment" >Comment: {comment.comment}</div>
-                        <div className="comment-detail__created" >Posted: {moment(comment.created_at).format('kk:mm MMMM Do YYYY')}</div>
+                        <div className="comment-detail__created" >Posted: {moment(comment.created_at).format('kk:mm D/MM/YYYY')}</div>
                 </div>
             </div>
         )

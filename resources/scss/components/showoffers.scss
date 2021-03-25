@@ -1,25 +1,53 @@
-.offers {
+.offers{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-    width: 80rem;
-    .offer-detail {
-        height: auto;
-        width: 15rem;
+    align-items: center;
+    .offers-list {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         align-content: center;
-        background-color: rgba($color: lightgrey, $alpha: 0.7);
-        border: 5px solid #62bbd3;
-        border-radius: 30px;
-        padding: 0.5rem;
-        margin: 0.5rem;
-        .offer-detail__title{
+        width: 80rem;
+        .offer-detail {
+          height: auto;
+          width: 15rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          background-color: rgba($color: white, $alpha: 0.7);
+          border: 5px solid #62bbd3;
+          border-radius: 30px;
+          padding: 0.5rem;
+          margin: 0.5rem;
+          .offer-detail__title{
             margin: 0%;
+          }
+          a {
+            color: black;
+            font-weight: 900; 
+          }
         }
     }
+    button {
+        height: 5rem;
+        width: 8rem;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background-color: rgba($color: white, $alpha: 0.7);
+        border: 5px solid #62bbd3;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        font-weight: 900;
+        text-decoration: none;
+        font-family: 'Varela Round', sans-serif;
+      }
 }
+

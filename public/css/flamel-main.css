@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext);
+@import url(https://fonts.googleapis.com/css2?family=Fredoka+One&family=Varela+Round&display=swap);
 header {
   background: #80c9dd;
   color: black;
@@ -55,8 +56,8 @@ header .title-center .title-center-city {
 }
 header .title-center .title-center-city h2 {
   font-size: 4rem;
-  font-weight: 900;
   margin: 2rem;
+  font-family: "Fredoka One", cursive;
 }
 header .title-center .title-center-city select {
   align-self: flex-end;
@@ -164,111 +165,214 @@ footer nav .icons {
   align-items: center;
 }
 
-.login-form {
+.login-container {
   height: auto;
-  width: 20rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: rgba(211, 211, 211, 0.7);
-  border: 5px solid #62bbd3;
-  border-radius: 30px;
-  padding: 2rem;
-}
-
-.register {
-  height: auto;
-  width: 45rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: rgba(211, 211, 211, 0.7);
-  border: 5px solid #62bbd3;
-  border-radius: 30px;
-}
-.register .register-form {
-  padding: 0.5rem;
-}
-.register .register-image img {
-  height: 30rem;
-  width: 25rem;
-}
-
-.create-listing-form {
-  height: auto;
-  width: 20rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   align-content: center;
   background-color: rgba(255, 255, 255, 0.7);
   border: 5px solid #62bbd3;
   border-radius: 30px;
-  padding: 2rem;
+  padding: 1rem;
   font-weight: 900;
 }
-.create-listing-form input {
+.login-container .login-form {
+  margin-right: 1rem;
+  margin-top: 3rem;
+}
+.login-container .login-form input {
   border: solid #62bbd3;
   border-radius: 5px;
   margin: 0.1rem;
   background-color: #80c9dd;
 }
-.create-listing-form textarea {
-  border: solid #62bbd3;
-  border-radius: 5px;
-  margin: 0.1rem;
-}
-.create-listing-form select {
-  border: solid #62bbd3;
-  border-radius: 5px;
-  margin: 0.1rem;
-}
-.create-listing-form button {
+.login-container .login-form button {
   border: solid #62bbd3;
   border-radius: 5px;
   margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+}
+.login-container .login-image img {
+  height: 40rem;
+  width: 30rem;
+  border-radius: 10px;
+}
+
+.register {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 1rem;
+  font-weight: 900;
+}
+.register .register-form {
+  margin-right: 1rem;
+}
+.register .register-form input {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.register .register-form textarea {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.register .register-form select {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.register .register-form button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+}
+.register .register-image img {
+  height: 40rem;
+  width: 30rem;
+  border-radius: 10px;
+}
+
+.create-listing {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 1rem;
+  font-weight: 900;
+}
+.create-listing .create-listing-form {
+  margin-right: 1rem;
+  margin-top: 3rem;
+}
+.create-listing .create-listing-form input {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.create-listing .create-listing-form textarea {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.create-listing .create-listing-form select {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.create-listing .create-listing-form button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+}
+.create-listing .create-listing-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 40rem;
+  width: 40rem;
+}
+.create-listing .create-listing-images img {
+  height: 19rem;
+  width: 19rem;
+  border-radius: 10px;
+  margin: 0.5rem;
 }
 
 .offers {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.offers .offers-list {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   width: 80rem;
 }
-.offers .offer-detail {
+.offers .offers-list .offer-detail {
   height: auto;
   width: 15rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: rgba(211, 211, 211, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   border: 5px solid #62bbd3;
   border-radius: 30px;
   padding: 0.5rem;
   margin: 0.5rem;
 }
-.offers .offer-detail .offer-detail__title {
+.offers .offers-list .offer-detail .offer-detail__title {
   margin: 0%;
+}
+.offers .offers-list .offer-detail a {
+  color: black;
+  font-weight: 900;
+}
+.offers button {
+  height: 5rem;
+  width: 8rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Varela Round", sans-serif;
 }
 
 .requests {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.requests .requests-list {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   width: 80rem;
 }
-.requests .request-detail {
+.requests .requests-list .request-detail {
   height: auto;
   width: 15rem;
   display: flex;
@@ -276,45 +380,81 @@ footer nav .icons {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: rgba(211, 211, 211, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   border: 5px solid #62bbd3;
   border-radius: 30px;
   padding: 0.5rem;
   margin: 0.5rem;
 }
-.requests .request-detail .request-detail__title {
+.requests .requests-list .request-detail .request-detail__title {
   margin: 0%;
 }
-
-#edituser {
-  height: auto;
-  width: 20rem;
+.requests .requests-list .request-detail a {
+  color: black;
+  font-weight: 900;
+}
+.requests button {
+  height: 5rem;
+  width: 8rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Varela Round", sans-serif;
+}
+
+.editUser {
+  height: auto;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
   background-color: rgba(255, 255, 255, 0.7);
   border: 5px solid #62bbd3;
   border-radius: 30px;
-  padding: 2rem;
+  padding: 1rem;
+  font-weight: 900;
+}
+.editUser .editUser-form {
+  margin-right: 1rem;
+  margin-top: 3rem;
+}
+.editUser .editUser-form input {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.editUser .editUser-form textarea {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.editUser .editUser-form button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+}
+.editUser .editUser-image img {
+  height: 40rem;
+  width: 30rem;
+  border-radius: 10px;
 }
 
 .listing-detail {
-  height: auto;
-  width: 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 5px solid #62bbd3;
-  border-radius: 30px;
-  padding: 2rem;
-}
-.listing-detail .listing-detail__comment {
-  height: auto;
-  width: 18rem;
+  min-height: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -324,10 +464,288 @@ footer nav .icons {
   border: 5px solid #62bbd3;
   border-radius: 30px;
   padding: 1rem;
+  font-weight: 900;
 }
-.listing-detail .listing-detail__comment .comment-detail {
+.listing-detail a {
+  color: black;
+}
+.listing-detail .listing-detail__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.listing-detail .listing-detail__main .listing-detail__left {
+  justify-self: flex-start;
+  margin-right: 1rem;
+}
+.listing-detail .listing-detail__main .listing-detail__right img {
+  width: 10rem;
+  margin: 0.5rem;
+}
+.listing-detail .listing-detail__comment {
+  min-height: 20rem;
+  min-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  margin: 1rem;
+}
+.listing-detail .listing-detail__comment h2 {
+  align-self: center;
+  margin: 0.5rem;
+}
+.listing-detail .listing-detail__comment a {
+  margin: 0;
+  align-self: center;
+}
+.listing-detail .listing-detail__comment .comments-list {
+  height: 18rem;
+  min-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.listing-detail .listing-detail__comment .comments-list .comment-detail {
   height: auto;
-  width: 16em;
+  max-width: 16rem;
+  max-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.listing-detail button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+}
+
+.link {
+  float: right;
+  height: 5rem;
+  width: 8rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.comment-form {
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 1rem;
+  font-weight: 900;
+  margin-right: 1rem;
+}
+.comment-form input {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.comment-form textarea {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.comment-form button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+}
+
+.transaction-form {
+  height: auto;
+  width: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 1rem;
+  font-weight: 900;
+  margin-right: 1rem;
+}
+.transaction-form label {
+  margin: 1rem;
+}
+.transaction-form input {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+  margin: 1rem;
+}
+.transaction-form button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+  margin: 1rem;
+}
+
+.user-detail {
+  height: auto;
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 5px solid #62bbd3;
+  border-radius: 30px;
+  padding: 1rem;
+  font-weight: 900;
+}
+.user-detail .user-detail__top {
+  text-align: center;
+}
+.user-detail .user-detail__main {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+.user-detail .user-detail__main .user-detail__right {
+  display: flex;
+  flex-direction: row;
+}
+.user-detail .user-detail__main .user-detail__right h4 {
+  margin-top: 0;
+  margin-right: 1rem;
+}
+.user-detail .user-detail__main .user-detail__right img {
+  height: 6rem;
+}
+.user-detail .user-detail__listingsandtransactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.user-detail .user-detail__listingsandtransactions a {
+  color: black;
+}
+.user-detail .user-detail__listingsandtransactions .user-detail__listings {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.user-detail .user-detail__listingsandtransactions .user-detail__listings h4 {
+  margin: 0;
+  font-size: 2rem;
+}
+.user-detail .user-detail__listingsandtransactions .user-detail__listings .listing {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.1rem;
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: white;
+}
+.user-detail .user-detail__listingsandtransactions .user-detail__transactions {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.user-detail .user-detail__listingsandtransactions .user-detail__transactions h4 {
+  margin: 0;
+  font-size: 2rem;
+}
+.user-detail .user-detail__listingsandtransactions .user-detail__transactions .transaction {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.1rem;
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: white;
+}
+.user-detail .register-form {
+  margin-right: 1rem;
+}
+.user-detail .register-form input {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.user-detail .register-form textarea {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.user-detail .register-form select {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin: 0.1rem;
+  background-color: #80c9dd;
+}
+.user-detail .register-form button {
+  border: solid #62bbd3;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-family: "Varela Round", sans-serif;
+  background-color: #80c9dd;
+  font-weight: 900;
+}
+.user-detail .register-image img {
+  height: 40rem;
+  width: 30rem;
+  border-radius: 10px;
+}
+
+.transaction-detail {
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -336,7 +754,11 @@ footer nav .icons {
   background-color: rgba(255, 255, 255, 0.7);
   border: 5px solid #62bbd3;
   border-radius: 30px;
-  padding: 2rem;
+  padding: 1rem;
+  font-weight: 900;
+}
+.transaction-detail a {
+  color: black;
 }
 
 html {
@@ -353,9 +775,11 @@ html {
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
+  font-family: "Varela Round", sans-serif;
 }
 
 body {
+  background: #80c9dd;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -379,56 +803,6 @@ main {
   background-image: linear-gradient(30deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(150deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(30deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(150deg, #80c9dd 12%, transparent 12.5%, transparent 87%, #80c9dd 87.5%, #80c9dd), linear-gradient(60deg, #d5eaf0 25%, transparent 25.5%, transparent 75%, #d5eaf0 75%, #d5eaf0), linear-gradient(60deg, #d5eaf0 25%, transparent 25.5%, transparent 75%, #d5eaf0 75%, #d5eaf0);
   background-size: 40px 70px;
   background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
-}
-main .offers {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  width: 80rem;
-}
-main .offers .offer-detail {
-  height: auto;
-  width: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 5px solid #62bbd3;
-  border-radius: 30px;
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
-main .offers .offer-detail .offer-detail__title {
-  margin: 0%;
-}
-main .requests {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  width: 80rem;
-}
-main .requests .request-detail {
-  height: auto;
-  width: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 5px solid #62bbd3;
-  border-radius: 30px;
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
-main .requests .request-detail .request-detail__title {
-  margin: 0%;
 }
 
 /*# sourceMappingURL=flamel-main.css.map*/

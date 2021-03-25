@@ -1,5 +1,4 @@
 header {
-  // background-color: #80b0ff;
   background: #80c9dd;
   color: black;
   display: flex;
@@ -54,8 +53,8 @@ header {
       margin: 1rem;
       h2 {
         font-size: 4rem;
-        font-weight: 900;
         margin: 2rem;
+        font-family: 'Fredoka One', cursive;
       }
       select {
         align-self: flex-end;
