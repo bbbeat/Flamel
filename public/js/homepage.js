@@ -2875,7 +2875,7 @@ function User(props) {
                   className: "listing__title",
                   children: ["Listing: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
                     href: "/transaction/" + transaction.id,
-                    children: transaction.listing_id
+                    children: transaction.listing.title
                   })]
                 })
               }, transaction.id)

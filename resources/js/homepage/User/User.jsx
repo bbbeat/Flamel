@@ -57,7 +57,7 @@ export default function User(props) {
                             <div className="transaction">
                                 <div key={transaction.id}>
                                     <div className="listing__title" >
-                                        Listing: <a href={"/transaction/"+transaction.id}>{transaction.listing_id}</a>
+                                        Listing: <a href={"/transaction/"+transaction.id}>{transaction.listing.title}</a>
                                     </div>
                                 </div>
                             </div>
